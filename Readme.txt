@@ -65,6 +65,9 @@ C:\Users\yourusername\AppData\Roaming\endless-sky\plugins\
 ---------------------------------------------------------------------------------------------
 - CHANGELOG
 
+0.2
+	* Fixed several passenger mission descriptions
+
 0.1
 	* First release
 	* Added planet X-283N1 in Alpha Centauri

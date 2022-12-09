@@ -218,7 +218,7 @@ mission "spacecrate_passenger_delivery_3"
 	job
 	repeat
 	name "Factory workers to <planet>"
-	description "This group of <bunks> factory workers is following the promise of a career on <destination>, they saved up <payment> credits for your troubles. This job includes a signing bonus from SpaceCrate."
+	description "This group of <bunks> factory workers is following the promise of a career on <destination>, they saved up <payment> for your troubles. This job includes a signing bonus from SpaceCrate."
 	passengers 2 6
 	to offer
 		random < 50
@@ -245,7 +245,7 @@ mission "spacecrate_passenger_delivery_4"
 	job
 	repeat
 	name "Factory workers to <planet>"
-	description "A group of <bunks> factory workers is hoping to find work on <destination>, they can pay you <payment> credits to take them there. This job includes a signing bonus from SpaceCrate."
+	description "A group of <bunks> factory workers is hoping to find work on <destination>, they can pay you <payment> to take them there. This job includes a signing bonus from SpaceCrate."
 	passengers 2 6
 	to offer
 		random < 50
