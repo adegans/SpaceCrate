@@ -33,9 +33,11 @@ mission "spacecrate_rush_1"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		payment -25000
+		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_2"
 	job
@@ -56,9 +58,11 @@ mission "spacecrate_rush_2"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		payment -30000
+		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_3"
 	job
@@ -80,9 +84,11 @@ mission "spacecrate_rush_3"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		payment -40000
+		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_4"
 	job
@@ -104,9 +110,11 @@ mission "spacecrate_rush_4"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		payment -60000
+		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_5"
 	job
@@ -128,6 +136,8 @@ mission "spacecrate_rush_5"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		payment -100000
+		"reputation: SpaceCrate" -= 40

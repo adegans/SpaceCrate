@@ -9,7 +9,7 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 # ------------------------------------------------------------------------------------------
-# Passengers (getting them to X-283N1)
+# Misc missions for a bit of fun and variety
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_misc_1"
@@ -30,7 +30,10 @@ mission "spacecrate_misc_1"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 20
 		dialog "You drop off the <commodity> at an solid waste recycler and collect your payment of <payment>."
+	on fail
+		"reputation: SpaceCrate" -= 10
 		
 mission "spacecrate_misc_2"
 	job
@@ -49,4 +52,7 @@ mission "spacecrate_misc_2"
 		dialog "Having heard of a shipment of Quafe coming in the landing pad workers look at you expectantly..."
 	on complete
 		payment
+		"reputation: SpaceCrate" += 20
 		dialog "You drop off the <commodity> at the spaceport and receive your payment."
+	on fail
+		"reputation: SpaceCrate" -= 10

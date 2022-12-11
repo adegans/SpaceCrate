@@ -39,8 +39,8 @@ system "Alpha Centauri"
 	fleet "Small Republic" 2000
 	fleet "Large Republic" 6000
 	# Added for SpaceCrate
-	fleet "SpaceCrate merchants" 500
-	fleet "SpaceCrate Defense Force" 2000
+	fleet "spacecrate_merchantfleet" 1000
+	fleet "spacecrate_defensefleet" 2500
 	object
 		sprite star/g3
 		distance 38.238
@@ -112,7 +112,8 @@ planet "X-283N1"
 	government "SpaceCrate"
 	attributes "near earth" urban rich shipping mining farming factory
 	landscape land/x-283n1
-	description `Obsessed with trade and exports the population of X-283N1 has no time for politics and regulations. They're unified under CEO Arnan de Gans who runs the planet. Whatever goes for a government on the bustling planet is modeled like a corporate aboard of directors which answers only to CEO Arnan de Gans. The self-appointed CEO expects his planet to be profitable and prosperous. Some say X-283N1 is the most prosperous trading powerhouse in the known galaxy.`
+	description `Obsessed with trade and exports the population of X-283N1 has no time for politics and regulations. They're unified under CEO Arnan de Gans who runs the planet. Whatever goes for a government on the bustling planet is modeled like a corporate aboard of directors which answers only to CEO Arnan de Gans.`
+	description `The self-appointed CEO expects his planet to be profitable and prosperous. Some say X-283N1 is the most prosperous trading powerhouse in the known galaxy.`
 	description `Keep an eye out for Arnan as he is sometimes seen in and around Alpha Centauri with his ship the 'StarGoose'. Hail him and say Hi sometime.`
 	spaceport `You find the spaceport divided in 2 sectors; A modern looking area packed with warehouse for trading goods and terminals for handling passenger transports this port is situated in a huge industrious area.`
 	spaceport `Separated from the main spaceport you notice a mostly military area which appears to be the base for the defense force. But some small trade vessels can be seen there as well.`

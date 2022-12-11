@@ -9,7 +9,7 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 # ------------------------------------------------------------------------------------------
-# Passengers (getting them to X-283N1)
+# Small cargo export missions 
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_export_small_1"
@@ -30,6 +30,7 @@ mission "spacecrate_export_small_1"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 10
 		dialog phrase "generic cargo delivery payment"
 
 mission "spacecrate_export_small_2"
@@ -39,7 +40,7 @@ mission "spacecrate_export_small_2"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 15 30
 	to offer
-		random < 120
+		random < 40
 	source
 		government "SpaceCrate"
 	destination
@@ -49,6 +50,7 @@ mission "spacecrate_export_small_2"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 10
 		dialog phrase "generic cargo delivery payment"
 
 mission "spacecrate_export_small_3"
@@ -58,7 +60,7 @@ mission "spacecrate_export_small_3"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 30 45
 	to offer
-		random < 110
+		random < 60
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -70,6 +72,7 @@ mission "spacecrate_export_small_3"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 10
 		dialog phrase "generic cargo delivery payment"
 
 mission "spacecrate_export_small_4"
@@ -79,7 +82,7 @@ mission "spacecrate_export_small_4"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 35
 	to offer
-		random < 120
+		random < 30
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -90,6 +93,7 @@ mission "spacecrate_export_small_4"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 10
 		dialog phrase "generic cargo delivery payment"
 
 mission "spacecrate_export_small_5"
@@ -99,7 +103,7 @@ mission "spacecrate_export_small_5"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 2 14
 	to offer
-		random < 140
+		random < 40
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -111,6 +115,7 @@ mission "spacecrate_export_small_5"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 10
 		dialog phrase "generic cargo delivery payment"
 
 mission "spacecrate_export_small_6"
@@ -120,7 +125,7 @@ mission "spacecrate_export_small_6"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 2 9
 	to offer
-		random < 160
+		random < 60
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -132,4 +137,5 @@ mission "spacecrate_export_small_6"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
+		"reputation: SpaceCrate" += 10
 		dialog phrase "generic cargo delivery payment"

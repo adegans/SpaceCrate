@@ -1,0 +1,184 @@
+# Copyright (c) 2022-2023 by Arnan de Gans
+#
+# Endless Sky: SpaceCrate is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky: SpaceCrate is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+# ------------------------------------------------------------------------------------------
+# Applying at SpaceCrate as a regular courier
+# Offered on SpaceCrate planets
+# ------------------------------------------------------------------------------------------
+mission "spacecrate_story_signup_1"
+	name "The great application"
+	description "Travel 6 jumps to <destination> where you'll pick up raw materials and join a merchant fleet."
+	autosave
+	landing
+	source "X-283N1"
+	destination "Antipode"
+	to offer
+		# "reputation: SpaceCrate" > 10000
+		"reputation: SpaceCrate" > 10
+		"cargo space" >= 450
+		"spacecrate_career_reset" == 0
+	on offer
+		conversation
+			`While wiping bugs of your windshielp a SpaceCrate official approaches you with a brisk walk "Good day!" he shouts up at you, "It has come to our attention that you've gained quite the reputation with SpaceCrate Inc. as a reliable courier.`
+			`As such I've been authorized by CEO Arnan de Gans himself to recommend you for a position in our organization. Would you be interested in working for SpaceCrate Inc. on a more regular basis?`
+			`If this trial goes well you will be approved for larger and more lucrative jobs."`
+			choice
+				`	"Yep, where do I sign?"`
+					goto yes
+				`	"Interested? Sure! What does that entail?"`
+					goto moreinfo
+				`	"No thanks. I've got other things to do."`
+					goto no
+			label yes
+			`	"All right!" the official says, "Excellent! I like your enthusiasm. My name's John Curtain." "<first> <last>" you say."`
+			`	"You should be aware that you need a large vessel with a cargo hold of 450 tons at least for this first job. I'm assuming you have such a vessel available?"
+				choice
+				`	"Yeah that's fine."`
+					accept
+				choice
+				`	"Uh, I need some time to prepare my ship."`
+					defer
+			label moreinfo
+			`	"As you know we from SpaceCrate are all about exporting goods. To do so we need raw materials." the official says, "I am John Curtain. Currently I am putting together a sizable fleet to collect a shipment of raw materials." "I'm <first>" you say, "Where is the fleet going? And when? Any risk?"`
+			`	John replies "Always a risk... Although a small one. You'll get an escort from our Defense Force." he says nodding, "Everyone will be waiting at your destination."`
+			`	"The trip will be fairly short, 6 or 7 jumps from here. You'll leave as soon as you're able. But bear in mind you'll need a cargo hold of at least 450 tons."`
+				choice
+				`	"Considering your options you accept the job."`
+					accept
+				choice
+				`	"What the? I need some time to prepare my ship."`
+					defer
+			label no
+			`	"I'm sorry you aren't able to help. But, if you're back in the area soon, stop back in and perhaps you can join the next convoy."`
+				defer
+	on complete
+		dialog `You land at the spaceport and a message pops onto your comlog "This is port control. Please relax in the spaceport lounge while whe load the shipment."`
+	on fail
+		set "spacecrate_career_reset"
+		event "spacecrate_career_application_reset" 180
+		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
+
+mission "spacecrate_story_signup_2"
+	name "The great haul"
+	description "Deliver the shipment to <destination>."
+	autosave
+	cargo "Iron Ore" 450
+	source "Antipode"
+	destination "X-283N1"
+	to offer
+		has "spacecrate_story_signup_1: done"
+	npc accompany save
+		government "SpaceCrate"
+		personality 
+			confusion 15
+			escort opportunistic
+		fleet "spacecrate_missionfleet_1"
+	on offer
+		conversation
+			`As you sit in the spaceport watching the many ships you see a port official aproaching you. "Are you ready to head back to <destination>?" he asks? "The fleet is almost ready to depart."`
+			choice
+				`	"Sure! We can leave in a couple of minutes."`
+					goto yes
+				`	"Uh, sure... What fleet?"`
+					goto moreinfo
+				`	"I have some other things to do first."`
+					defer
+			label yes
+			`	"Great! Have a safe trip." he says.`
+				accept
+			label moreinfo
+			`	"There are 2 large Hauler and 4 Container Transports." he says, "your protection is provided by 8 Berserkers. Good luck out there!"`
+				accept
+	on complete
+		dialog `You touch down at <destination>. John waves from the landing pad. "Excellent job <first>. Meet me in the spaceport when you're ready for the next assignment."`
+	on fail
+		set "spacecrate_career_reset"
+		event "spacecrate_career_application_reset" 180
+		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
+
+mission "spacecrate_story_signup_3"
+	name "Managerial pickup"
+	description "Head out with John Curtain and recruit a new managing director from <destination>."
+	autosave
+	passengers 1
+	source "X-283N1"
+	destination "Skillet"
+	to offer
+		has "spacecrate_story_signup_2: done"
+	on offer
+		conversation
+			`John comes over with your next assignment, "Can you take me to <destination>?" he asks, "We're tasked with recruiting a new managing director for the banana straightening factory."`
+			`"A small ship like a Shuttle or something similarly small and fast will suffice." He adds.`
+			choice
+				"	Sure! Let's go!"
+					accept
+				"	No thanks. I'm going to head out on my own."
+					fail
+	on complete
+		dialog `"Consider yourself at liberty for the rest of the day. Meet me in the spaceport tomorrow morning." John informs you before heading into the spaceport himself.`
+	on fail
+		set "spacecrate_career_reset"
+		event "spacecrate_career_application_reset" 180
+		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
+
+mission "spacecrate_story_signup_4"
+	name "A slight detour"
+	description "Head to <destination> to collect Justine her personal belongings."
+	passengers 2
+	source "Skillet"
+	destination "Pearl"
+	to offer
+		has "spacecrate_story_signup_3: done"
+	on offer
+		conversation
+			`John meets you in the Spaceport the next day and introduces Justine, a timid looking woman, as the newly recruited manager.`
+			`"Justine is the new Banana Straigthener." John says with a smile, "But on one condition, remember?" Justine quickly interjects. "We have to go to Pearl to pick up some of my personal things.""`
+			choice
+				"	Shruggs. We'll leave in a minute!"
+					accept
+				"	I've got other things to do. Cya!"
+					fail
+	on complete
+		dialog `John lets you know we'll be moving on soon, so refuel and be ready to leave soon.`
+	on fail
+		set "spacecrate_career_reset"
+		event "spacecrate_career_application_reset" 180
+		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
+
+mission "spacecrate_story_signup_5"
+	name "Getting the job"
+	description "Finally head back to <destination> and finish up your recruiment trial."
+	passengers 2
+	cargo "Justine's personal items" 2
+	source "Pearl"
+	destination "X-283N1"
+	to offer
+		has "spacecrate_story_signup_4: done"
+	on offer
+		conversation
+			`Hours later John comes running back followed by Justine and asks "Ready to go?"`
+			`Looking at the few boxes in the cargo hold you wonder what could have taken them so long...`
+			choice
+				"	Yep, ready!"
+					accept
+				"	I've changed my mind about all this. I'm out!"
+					fail
+	on complete
+		payment 1000000
+		"salary: SpaceCrate" = 10000
+		set "spacecrate_employee"
+		conversation
+			`John steps into the cockpit as you land. "I'm impressed with your work." He says. "I've taken the liberty of signing you on for that position at SpaceCrate in Logistics."`
+			`"The main perks are that you'll get a maintenance fee in the form of a basic salary and you'll be authorized for larger shipments" John continues.`
+			`"As business continues to expand more jobs and assignments may become available in the future."`
+	on fail
+		set "spacecrate_career_reset"
+		event "spacecrate_career_application_reset" 180
+		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."

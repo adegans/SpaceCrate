@@ -9,11 +9,11 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 # ------------------------------------------------------------------------------------------
-# Merchant fleet
+# Fleet callsigns
 # ------------------------------------------------------------------------------------------
-phrase "SpaceCrate Merchants"
+phrase "spacecrate_callsigns"
 	word
-		SCM-
+		SC-
 	phrase
 		digit
 	phrase
@@ -23,9 +23,12 @@ phrase "SpaceCrate Merchants"
 	phrase
 		digit
 
-fleet "SpaceCrate merchants"
+# ------------------------------------------------------------------------------------------
+# Merchant fleet
+# ------------------------------------------------------------------------------------------
+fleet "spacecrate_merchantfleet"
 	government "SpaceCrate"
-	names "SpaceCrate Merchants"
+	names "spacecrate_callsigns"
 	cargo 5
 	personality
 		confusion 40
@@ -86,26 +89,14 @@ fleet "SpaceCrate merchants"
 		"Berserker" 2
 
 # ------------------------------------------------------------------------------------------
-# Combat fleet
+# SpaceCrate Defense Force
 # ------------------------------------------------------------------------------------------
-phrase "SpaceCrate Defense Force"
-	word
-		SCDF-
-	phrase
-		digit
-	phrase
-		digit
-	phrase
-		digit
-	phrase
-		digit
-
-fleet "SpaceCrate Defense Force"
+fleet "spacecrate_defensefleet"
 	government "SpaceCrate"
-	names "SpaceCrate Defense Force"
+	names "spacecrate_callsigns"
 	cargo 2
 	personality
-		nemesis opportunistic merciful staying
+		nemesis opportunistic staying
 		confusion 10
 	variant 10
 		"Argosy (Blaster)" 4
@@ -169,3 +160,22 @@ fleet "SpaceCrate Defense Force"
 		"Leviathan (Heavy)" 3
 		"Firebird (Plasma)" 6
 		"Berserker (Afterburner)" 4
+
+# ------------------------------------------------------------------------------------------
+# Merchant fleet
+# ------------------------------------------------------------------------------------------
+# Used for career missions
+# ------------------------------------------------------------------------------------------
+fleet "spacecrate_missionfleet_1"
+	government "SpaceCrate"
+	names "spacecrate_callsigns"
+	cargo 4
+	commodities "Iron Ore" "Copper Ore" "Bauxite" "Tritanium"
+	personality
+		confusion 15
+		escort opportunistic
+	variant
+		"Hauler III" 2
+		"Container Transport" 4
+		"Berserker" 8
+

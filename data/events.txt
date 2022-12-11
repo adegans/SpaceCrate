@@ -8,20 +8,9 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-government "SpaceCrate"
-	"display name" "SpaceCrate Inc"
-	swizzle 0
-	color 235 118 0
-	"crew attack" 1.2
-	"crew defense" 2.2
-	"player reputation" 2
-	"attitude toward"
-		"Merchant" .5
-		"Militia" .01
-		"Pirate" -.05
-		"Navy Intelligence" .05
-		"Navy (Oathkeeper)" .4
-		"Neutral" .01
-		"Quarg" .1
-	bribe 0.06
-	fine 0.15
+# ------------------------------------------------------------------------------------------
+# Event timer for career application
+# Activates 180 days after application mission is failed
+# ------------------------------------------------------------------------------------------
+event "spacecrate_career_application_reset"
+	clear "spacecrate_career_reset"

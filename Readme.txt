@@ -65,8 +65,21 @@ C:\Users\yourusername\AppData\Roaming\endless-sky\plugins\
 ---------------------------------------------------------------------------------------------
 - CHANGELOG
 
+0.3
+	* Added: Reputation score to earn bigger jobs with SpaceCrate Inc
+	* Added: Reputation earned by completing a SpaceCrate mission
+	* Added: Reputation lost by failing/aborting a SpaceCrate mission
+	* Added: 'Corrupt SpaceCrate Official' to X-283N1 Spaceport to leak your reputation score
+	* Added: Missing 'stopover dialog' for all passenger pickup jobs
+	* Tweak: Reduced passenger mission availability
+	* Tweak: Planet description readability
+	* Tweak: Slightly reduced SpaceCrate fleet spawning
+	* Tweak: Government attitude to be "less caring" for other factions
+	* Tweak: Defense fleet now scans incoming ships (enforcement)
+	* Fixed: CEO Arnan personalities
+
 0.2
-	* Fixed several passenger mission descriptions
+	* Fixed: Several passenger mission descriptions
 
 0.1
 	* First release

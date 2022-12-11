@@ -1,30 +1,29 @@
+# ------------------------------------------------------------------------------------------
 # Off-world news
-phrase "SpaceCrate rumors"
-	word
-		"Freelance"
-		"Merchant"
-		"Spacecraft"
-		"Spaceship"
-		"Starship"
-		"Prospecting"
-		"Weary"
-		"Disgruntled"
-	word
-		" "
-	word
-		"captain"
-		"pilot"
-		"settler"
-		"employee"
-		"pioneer"
-		"opportunist"
-
-news "Talk about SpaceCrate"
+# Visible in Spaceports near Alpha Centauri
+# ------------------------------------------------------------------------------------------
+news "spacecrate_offworld"
 	location
-		government "Republic" "Free Worlds" "Syndicate"
+		near "Alpha Centauri" 10
+		not government "SpaceCrate"
 	name
-		phrase
-			"SpaceCrate rumors"
+		word
+			"Curious"
+			"Shady"
+			"Prospecting"
+			"Weary"
+			"Disgruntled"
+			"Optimistic"
+		word
+			" "
+		word
+			"settler"
+			"employee"
+			"wanderer"
+			"worker"
+			"laborer"
+			"pioneer"
+			"opportunist"
 	message
 		word
 			`"`
@@ -43,39 +42,38 @@ news "Talk about SpaceCrate"
 		word
 			`"`
 
+# ------------------------------------------------------------------------------------------
 # On-world news
-phrase "SpaceCrate workers"
-	word
-		"Factory worker"
-		"Merchant"
-		"Laborer"
-		"Farmer"
-		"Worker"
-		"Security guard"
-		"Port worker"
-		"AI psychiatrist"
-		"Office assistant"
-		"Logistics operator"
-		"Export logistics engineer"
-		"Human resources"
-		"Solid state checker"
-		"Logistics manager"
-		"Office manager"
-		"Farm hand"
-		"Production line assistant"
-		"Plumber"
-		"Factory button pusher"
-		"Banana straigthener"
-		"Corporate assistant"
-		"Automation manager"
-		"Syringe tester"
-
-news "Visiting SpaceCrate"
+# Visible in SpaceCrate Spaceports
+# ------------------------------------------------------------------------------------------
+news "spacecrate_onworld"
 	location
 		government "SpaceCrate"
 	name 
-		phrase
-			"SpaceCrate workers"
+		word
+			"Factory worker"
+			"Merchant"
+			"Laborer"
+			"Farmer"
+			"Worker"
+			"Security guard"
+			"Port worker"
+			"AI psychiatrist"
+			"Office assistant"
+			"Logistics operator"
+			"Export logistics engineer"
+			"Human resources"
+			"Solid state checker"
+			"Logistics manager"
+			"Office manager"
+			"Farm hand"
+			"Production line assistant"
+			"Plumber"
+			"Factory button pusher"
+			"Banana straigthener"
+			"Corporate assistant"
+			"Automation manager"
+			"Syringe tester"
 	message
 		word
 			`"`
@@ -83,7 +81,10 @@ news "Visiting SpaceCrate"
 			"Increase your combat rating to get access to more lucrative jobs."
 			"Those security types keep harassing port workers."
 			"I found a rich deposit in the mines yesterday!"
+			"I heard there is a secret renown system that earns perks and employment options."
+			"Have you heard the rumors? Apparently there is a secret renown system that earns employment options."
 			"SpaceCrate is a great employer."
+			"Did you know CEO Arnan has a website? Visit www.arnan.me on your communicator."
 			"SpaceCrate is a terrible employer."
 			"I used to work security for SpaceCrate. Now I'm a farmer."
 			"A higher combat rating gets you access to higher paying jobs."
@@ -95,3 +96,115 @@ news "Visiting SpaceCrate"
 			"We export so much tons of goods... Some day the whole planet will be consumed."
 		word
 			`"`
+
+# ------------------------------------------------------------------------------------------
+# On-world Misc
+# Visible in SpaceCrate Spaceports
+# ------------------------------------------------------------------------------------------
+news "spacecrate_internal_1"
+	location
+		government "SpaceCrate"
+	name 
+		word
+			"Corrupt SpaceCrate Official"
+	to show
+		"reputation: SpaceCrate" < 0
+	message
+		word
+			`"You've got a terrible reputation!"`
+			`"You must have lost a lot of cargo to get a reputation this bad!"`
+			`"Pilots with horrible reputation like this will never get a chance at steady employment with us!"`
+
+news "spacecrate_internal_2"
+	location
+		government "SpaceCrate"
+	name 
+		word
+			"Corrupt SpaceCrate Official"
+	to show
+		"reputation: SpaceCrate" >= 0
+		and
+			"reputation: SpaceCrate" <= 250
+	message
+		word
+			`"Your reputation with us is pretty low."`
+			`"With such a low reputation you should not expect much attention from the higher ups."`
+			`"If you want a chance at that paycheck you'll need more than a low reputation."`
+
+news "spacecrate_internal_3"
+	location
+		government "SpaceCrate"
+	name 
+		word
+			"Corrupt SpaceCrate Official"
+	to show
+		"reputation: SpaceCrate" >= 251
+		and
+			"reputation: SpaceCrate" <= 1000
+	message
+		word
+			`"Your reputation is slowly improving but is still not that great."`
+			`"You have much to do to reach an excellent reputation. It's pretty low right now."`
+
+news "spacecrate_internal_4"
+	location
+		government "SpaceCrate"
+	name 
+		word
+			"Corrupt SpaceCrate Official"
+	to show
+		"reputation: SpaceCrate" >= 1001
+		and
+			"reputation: SpaceCrate" <= 2500
+	message
+		word
+			`"Your reputation is improving."`
+			`"I'm pleased with your improved reputation."`
+			`"Still a long way to be excellent, but your reputation is improving."`
+			`"I shouldn't tell you this, but your reputation is improving."`
+
+news "spacecrate_internal_5"
+	location
+		government "SpaceCrate"
+	name 
+		word
+			"Corrupt SpaceCrate Official"
+	to show
+		"reputation: SpaceCrate" >= 2501
+		and
+			"reputation: SpaceCrate" <= 5000
+	message
+		word
+			`"Your reputation with SpaceCrate is pretty good."`
+			`"Your hard work is paying off. Your reputation is pretty good."`
+			`"Some of the SpaceCrate stockholders are starting to notice your good reputation."`
+
+news "spacecrate_internal_6"
+	location
+		government "SpaceCrate"
+	name 
+		word
+			"Corrupt SpaceCrate Official"
+	to show
+		"reputation: SpaceCrate" >= 5001
+		and
+			"reputation: SpaceCrate" <= 9999
+	message
+		word
+			`"Your reputation with SpaceCrate is pretty high."`
+			`"I shouldn't say this. But you have earned a high reputation with SpaceCrate."`
+			`"High reputation is impressive. That emplyment contract is within sight."`
+
+news "spacecrate_internal_7"
+	location
+		government "SpaceCrate"
+	name 
+		word
+			"Corrupt SpaceCrate Official"
+	to show
+		"reputation: SpaceCrate" > 10000
+	message
+		word
+			`"Your reputation with SpaceCrate is excellent. You should apply for a job with us. You'll need something the size of a Container Transport or bigger." (Check the Job Board)`
+			`"You've impressed the stockholders. If you have Container Transport or bigger you should apply for a job with us." (Check the Job Board)`
+			`"With an excellent track record like this... You should apply for a job with us. Make sure you can carry 500 tons or more." (Check the Job Board)`
