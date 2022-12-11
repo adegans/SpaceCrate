@@ -9,6 +9,90 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 # ------------------------------------------------------------------------------------------
+# Job termination
+# Offered on SpaceCrate planets
+# ------------------------------------------------------------------------------------------
+mission "spacecrate_employee_quit_1"
+	job
+	repeat
+	name "Quit working for SpaceCrate - Dangerous"
+	description "Steal a shipment of Quafe from the factory and gift it to the Quarg in <destination>. The Quarg might reward you for your gift, but SpaceCrate will definitely hunt you down and terminate your employment."
+	cargo "Quafe" 20 60
+	to offer
+		"combat rating" > 8103
+		"spacecrate_employee" > 0
+	source
+		government "SpaceCrate"
+	destination
+		government "Quarg"
+		near "Tarazed" 1 2
+	npc
+		government "SpaceCrate"
+		personality	nemesis opportunistic heroic entering
+		system "Alpha Centauri"
+		fleet "spacecrate_missionfleet_2"
+	npc
+		government "SpaceCrate"
+		personality	nemesis opportunistic heroic entering
+		system 
+			near "Cebalrai" 0 2
+		fleet "spacecrate_missionfleet_2"
+	npc
+		government "SpaceCrate"
+		personality	nemesis opportunistic heroic entering
+		system 
+			near "Dabih" 0 1
+		fleet "spacecrate_missionfleet_2" 2
+	npc
+		government "SpaceCrate"
+		personality	nemesis opportunistic heroic entering
+		system destination
+		fleet "spacecrate_missionfleet_2"
+	on complete
+		payment 10000 500
+		"reputation: SpaceCrate" = 2
+		"reputation: Quarg" += 30
+		clear "spacecrate_employee"
+		dialog "The Quarg look pleasantly surprised with your unexpected gift and give you a 'finders fee' of <payment>."
+		dialog "You get a message from SpaceCrate HR expressing their dissapointment and they notify you of the termination of your employment as well as a loss of reputation."
+	on fail
+		fine 100000
+		"reputation: SpaceCrate" = 2
+		clear "spacecrate_employee"
+		dialog "Looks like the SpaceCrate defense fleet caught up to you and they look none too happy. You get a hefty fine of <fine> and reputation loss for your foolishness."
+		dialog "SpaceCrate HR informs you that your employment has been terminated."
+
+mission "spacecrate_employee_quit_2"
+	job
+	repeat
+	clearance
+	name "Quit working for SpaceCrate - Risky"
+	description "Illegally dumb <cargo> on <destination>. Try not to get scanned or caught by law enforcement. The SpaceCrate broker has made sure you are cleared to land and but have leaked your name to the authorities. Payment is <payment>."
+	cargo "Toxic waste" 10 20
+	illegal 200000 `On top of the fine, your cargo is hereby confiscated.`
+	stealth
+	to offer
+		"combat rating" > 8103
+		"spacecrate_employee" > 0
+	source
+		government "SpaceCrate"
+	destination
+		planet "Watcher"
+	on complete
+		payment 10000 250
+		"reputation: SpaceCrate" = 4000
+		"reputation: Reublic" -= 2
+		clear "spacecrate_employee"
+		dialog "You dump the cargo straight out the door and get the hell out of there."
+		dialog "SpaceCrate HR informs you that your employment has been terminated and your reputation score has been demoted to to a decent standing."
+	on fail
+		fine 100000
+		"reputation: SpaceCrate" = 2
+		clear "spacecrate_employee"
+		dialog "Looks like something went wrong. You get a hefty fine of <fine> and reputation loss for your failure."
+		dialog "SpaceCrate HR informs you that your employment has been terminated."
+
+# ------------------------------------------------------------------------------------------
 # Exployee exclusive cargo export missions 
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
@@ -21,7 +105,7 @@ mission "spacecrate_export_employee_1"
 	to offer
 		random < 40
 		"combat rating" > 22026
-		has "spacecrate_employee"
+		"spacecrate_employee" > 0
 	source
 		government "SpaceCrate"
 	destination
@@ -45,7 +129,7 @@ mission "spacecrate_export_employee_2"
 	to offer
 		random < 50
 		"combat rating" > 22026
-		has "spacecrate_employee"
+		"spacecrate_employee" > 0
 	source
 		government "SpaceCrate"
 	destination
@@ -69,7 +153,7 @@ mission "spacecrate_export_employee_3"
 	to offer
 		random < 30
 		"combat rating" > 22026
-		has "spacecrate_employee"
+		"spacecrate_employee" > 0
 	source
 		government "SpaceCrate"
 	destination
@@ -100,7 +184,7 @@ mission "spacecrate_export_illegal_1"
 	to offer
 		random < 25
 		"combat rating" > 8103
-		has "spacecrate_employee"
+		"spacecrate_employee" > 0
 	source
 		government "SpaceCrate"
 	destination
@@ -141,11 +225,11 @@ mission "spacecrate_export_illegal_2"
 		random < 15
 		"reputation: Pirate" > -10
 		"combat rating" > 8103
-		has "spacecrate_employee"
+		"spacecrate_employee" > 0
 	source
 		government "SpaceCrate"
 	destination
-		system "Deadman's Cove"
+		planet "Deadman's Cove"
 	npc
 		government Syndicate
 		personality heroic waiting
@@ -191,11 +275,11 @@ mission "spacecrate_export_illegal_3"
 		random < 15
 		"reputation: Pirate" > -10
 		"combat rating" > 8103
-		has "spacecrate_employee"
+		"spacecrate_employee" > 0
 	source
 		government "SpaceCrate"
 	destination
-		system "Buccaneer Bay"
+		planet "Buccaneer Bay"
 	npc
 		government Syndicate
 		personality heroic waiting

@@ -16,12 +16,19 @@ politics. All they want is to ship stuff to the galaxy. And they're willing to p
 The riches this implies of-course attracts workers from all over the galaxy (passenger jobs 
 in most human systems) this in turn results in shipments of all sizes being produced ready 
 for export (cargo jobs). Higher paying and more challenging jobs (bulk shipments/rush jobs) 
-are unlocked as your combat rating goes up. With all jobs accessible once you reach level 10.
+are unlocked as your combat rating goes up. With all common jobs accessible once you reach 
+level 10. 
 
-You will not find fighting jobs or other combat related activities in this plugin as that 
-is not what this mod is for. Instead the mod relies on already available mechanics to create
-a (pirate) threat for your growing merchant fleet. The planet does have a sizable defense 
-force that will attack you like a bunch of mad pirates should you contest the planet.
+With doing jobs and to some extend killing pirates you gain reputation with SpaceCrate Inc.
+Once your reputation is sufficiently highCEO Arnan sends out a recruiter to give you a job 
+with a salary through a basic story line. Completing the story line will unlock even larger 
+and riskier jobs normally reserved for the inner circle of SpaceCrate.
+
+Other than a few illicit jobs you will not find fighting jobs or other combat related 
+activities in this plugin as that is not what this mod is for. Instead the mod relies on 
+already available mechanics to create a (pirate) threat for your growing merchant fleet. 
+The planet does have a sizable defense force that will attack you like a bunch of mad 
+pirates should you contest the planet.
 
 You'll see CEO Arnan fly in and around Alpha Centauri in his ship 'StarGoose' encouraging 
 you to visit his planet and make some money if you hail him.
@@ -66,17 +73,22 @@ C:\Users\yourusername\AppData\Roaming\endless-sky\plugins\
 - CHANGELOG
 
 0.3
-	* Added: Reputation score to earn bigger jobs with SpaceCrate Inc
-	* Added: Reputation earned by completing a SpaceCrate mission
-	* Added: Reputation lost by failing/aborting a SpaceCrate mission
+	* Added: Short storyline to get employed by SpaceCrate once your reputation is high enough
+	* Added: Exclusive employee missions with higher rewards and risks (optional)
+	* Added: Reputation earned by completing a SpaceCrate Inc. missions
+	* Added: Reputation lost by failing/aborting a SpaceCrate Inc. missions
 	* Added: 'Corrupt SpaceCrate Official' to X-283N1 Spaceport to leak your reputation score
 	* Added: Missing 'stopover dialog' for all passenger pickup jobs
-	* Tweak: Reduced passenger mission availability
-	* Tweak: Planet description readability
+	* Added: 2 missions to terminate SpaceCrate employment
+	* Tweak: Slightly reduced passenger mission availability
 	* Tweak: Slightly reduced SpaceCrate fleet spawning
 	* Tweak: Government attitude to be "less caring" for other factions
 	* Tweak: Defense fleet now scans incoming ships (enforcement)
+	* Fixed: Mission availability 'random' values too high
+	* Fixed: Planet description readability
 	* Fixed: CEO Arnan personalities
+	* Fixed: CEO Arnan spawn locations
+	* Fixed: Duplicate ships in fleet variants
 
 0.2
 	* Fixed: Several passenger mission descriptions

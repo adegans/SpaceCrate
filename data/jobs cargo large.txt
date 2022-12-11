@@ -30,7 +30,7 @@ mission "spacecrate_export_large_1"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
-		"reputation: SpaceCrate" += 30
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20
@@ -53,7 +53,7 @@ mission "spacecrate_export_large_2"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
-		"reputation: SpaceCrate" += 30
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20
@@ -77,7 +77,7 @@ mission "spacecrate_export_large_3"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
-		"reputation: SpaceCrate" += 30
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20
@@ -100,7 +100,7 @@ mission "spacecrate_export_large_4"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
-		"reputation: SpaceCrate" += 30
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20
@@ -124,7 +124,7 @@ mission "spacecrate_export_large_5"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
-		"reputation: SpaceCrate" += 30
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20
@@ -148,7 +148,7 @@ mission "spacecrate_export_large_6"
 		dialog phrase "generic cargo on visit"
 	on complete
 		payment
-		"reputation: SpaceCrate" += 30
+		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20

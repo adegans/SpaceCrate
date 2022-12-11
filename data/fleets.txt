@@ -109,13 +109,11 @@ fleet "spacecrate_defensefleet"
 		"Clipper (Speedy)" 5
 	variant 30
 		"Clipper (Speedy)" 5
-		"Hawk (Speedy)" 4
-		"Hawk (Speedy)" 3
+		"Hawk (Speedy)" 7
 		"Argosy (Laser)" 5
 	variant 40
-		"Hawk (Speedy)" 2
+		"Hawk (Speedy)" 7
 		"Argosy (Turret)" 2
-		"Hawk (Speedy)" 5
 		"Modified Argosy (Heavy)" 3
 		"Hawk (Speedy)" 6
 	variant 50
@@ -162,9 +160,7 @@ fleet "spacecrate_defensefleet"
 		"Berserker (Afterburner)" 4
 
 # ------------------------------------------------------------------------------------------
-# Merchant fleet
-# ------------------------------------------------------------------------------------------
-# Used for career missions
+# Mission fleets
 # ------------------------------------------------------------------------------------------
 fleet "spacecrate_missionfleet_1"
 	government "SpaceCrate"
@@ -179,3 +175,24 @@ fleet "spacecrate_missionfleet_1"
 		"Container Transport" 4
 		"Berserker" 8
 
+fleet "spacecrate_missionfleet_2"
+	government "SpaceCrate"
+	names "spacecrate_callsigns"
+	cargo 2
+	personality
+		nemesis opportunistic heroic entering
+		confusion 10
+	variant 10
+		"Argosy (Blaster)" 2
+		"Argosy (Laser)" 3
+		"Argosy (Turret)" 2
+	variant 20
+		"Modified Argosy (Heavy)" 5
+		"Modified Argosy (Blaster)" 2
+	variant 30
+		"Hawk (Speedy)" 2
+		"Argosy (Laser)" 5
+	variant 40
+		"Hawk (Speedy)" 2
+		"Argosy (Turret)" 2
+		"Modified Argosy (Heavy)" 4

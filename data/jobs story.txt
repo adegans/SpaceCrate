@@ -28,7 +28,7 @@ mission "spacecrate_story_signup_1"
 		conversation
 			`While wiping bugs of your windshielp a SpaceCrate official approaches you with a brisk walk "Good day!" he shouts up at you, "It has come to our attention that you've gained quite the reputation with SpaceCrate Inc. as a reliable courier.`
 			`As such I've been authorized by CEO Arnan de Gans himself to recommend you for a position in our organization. Would you be interested in working for SpaceCrate Inc. on a more regular basis?`
-			`If this trial goes well you will be approved for larger and more lucrative jobs."`
+			`We'll do a trial of a few missions first. At the end of the trial you'll be awarded 1 million credits for your efforts if you accept the position."`
 			choice
 				`	"Yep, where do I sign?"`
 					goto yes
@@ -38,28 +38,18 @@ mission "spacecrate_story_signup_1"
 					goto no
 			label yes
 			`	"All right!" the official says, "Excellent! I like your enthusiasm. My name's John Curtain." "<first> <last>" you say."`
-			`	"You should be aware that you need a large vessel with a cargo hold of 450 tons at least for this first job. I'm assuming you have such a vessel available?"
-				choice
-				`	"Yeah that's fine."`
-					accept
-				choice
-				`	"Uh, I need some time to prepare my ship."`
-					defer
+			`	"You should be aware that you need a large vessel with a cargo hold of 450 tons at least for this first job. I'm assuming you have such a vessel available?"`
+				accept
 			label moreinfo
 			`	"As you know we from SpaceCrate are all about exporting goods. To do so we need raw materials." the official says, "I am John Curtain. Currently I am putting together a sizable fleet to collect a shipment of raw materials." "I'm <first>" you say, "Where is the fleet going? And when? Any risk?"`
 			`	John replies "Always a risk... Although a small one. You'll get an escort from our Defense Force." he says nodding, "Everyone will be waiting at your destination."`
 			`	"The trip will be fairly short, 6 or 7 jumps from here. You'll leave as soon as you're able. But bear in mind you'll need a cargo hold of at least 450 tons."`
-				choice
-				`	"Considering your options you accept the job."`
-					accept
-				choice
-				`	"What the? I need some time to prepare my ship."`
-					defer
+				accept
 			label no
 			`	"I'm sorry you aren't able to help. But, if you're back in the area soon, stop back in and perhaps you can join the next convoy."`
 				defer
 	on complete
-		dialog `You land at the spaceport and a message pops onto your comlog "This is port control. Please relax in the spaceport lounge while whe load the shipment."`
+		dialog `You land at the spaceport and a message pops onto your comlog "This is port control. Please relax in the spaceport lounge while we load the shipment."`
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
@@ -74,6 +64,8 @@ mission "spacecrate_story_signup_2"
 	destination "X-283N1"
 	to offer
 		has "spacecrate_story_signup_1: done"
+		"cargo space" >= 450
+		# "reputation: SpaceCrate" > 10000
 	npc accompany save
 		government "SpaceCrate"
 		personality 
@@ -84,14 +76,14 @@ mission "spacecrate_story_signup_2"
 		conversation
 			`As you sit in the spaceport watching the many ships you see a port official aproaching you. "Are you ready to head back to <destination>?" he asks? "The fleet is almost ready to depart."`
 			choice
-				`	"Sure! We can leave in a couple of minutes."`
+				`	"Ok! We can leave in a couple of minutes."`
 					goto yes
 				`	"Uh, sure... What fleet?"`
 					goto moreinfo
 				`	"I have some other things to do first."`
 					defer
 			label yes
-			`	"Great! Have a safe trip." he says.`
+			`	"Great! Have a safe trip."`
 				accept
 			label moreinfo
 			`	"There are 2 large Hauler and 4 Container Transports." he says, "your protection is provided by 8 Berserkers. Good luck out there!"`
@@ -112,6 +104,7 @@ mission "spacecrate_story_signup_3"
 	destination "Skillet"
 	to offer
 		has "spacecrate_story_signup_2: done"
+		# "reputation: SpaceCrate" > 10000
 	on offer
 		conversation
 			`John comes over with your next assignment, "Can you take me to <destination>?" he asks, "We're tasked with recruiting a new managing director for the banana straightening factory."`
@@ -120,13 +113,13 @@ mission "spacecrate_story_signup_3"
 				"	Sure! Let's go!"
 					accept
 				"	No thanks. I'm going to head out on my own."
-					fail
+					decline
 	on complete
 		dialog `"Consider yourself at liberty for the rest of the day. Meet me in the spaceport tomorrow morning." John informs you before heading into the spaceport himself.`
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
+		dialog "You have failed or rejected an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
 
 mission "spacecrate_story_signup_4"
 	name "A slight detour"
@@ -136,6 +129,8 @@ mission "spacecrate_story_signup_4"
 	destination "Pearl"
 	to offer
 		has "spacecrate_story_signup_3: done"
+		"passenger space" >= 2
+		# "reputation: SpaceCrate" > 10000
 	on offer
 		conversation
 			`John meets you in the Spaceport the next day and introduces Justine, a timid looking woman, as the newly recruited manager.`
@@ -144,13 +139,13 @@ mission "spacecrate_story_signup_4"
 				"	Shruggs. We'll leave in a minute!"
 					accept
 				"	I've got other things to do. Cya!"
-					fail
+					decline
 	on complete
 		dialog `John lets you know we'll be moving on soon, so refuel and be ready to leave soon.`
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
+		dialog "You have failed or rejected an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
 
 mission "spacecrate_story_signup_5"
 	name "Getting the job"
@@ -161,6 +156,9 @@ mission "spacecrate_story_signup_5"
 	destination "X-283N1"
 	to offer
 		has "spacecrate_story_signup_4: done"
+		"passenger space" >= 2
+		"cargo space" >= 2
+		# "reputation: SpaceCrate" > 10000
 	on offer
 		conversation
 			`Hours later John comes running back followed by Justine and asks "Ready to go?"`
@@ -169,7 +167,7 @@ mission "spacecrate_story_signup_5"
 				"	Yep, ready!"
 					accept
 				"	I've changed my mind about all this. I'm out!"
-					fail
+					decline
 	on complete
 		payment 1000000
 		"salary: SpaceCrate" = 10000
@@ -181,4 +179,4 @@ mission "spacecrate_story_signup_5"
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
+		dialog "You have failed or rejected an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."

@@ -13,12 +13,9 @@ person "Arnan de Gans"
 	government "SpaceCrate"
 	personality
 		confusion 5
-		timid
-		forbearing
-		disables
+		timid forbearing disables
 	system
-		system "Alpha Centauri"
-		near "Alpha Centauri" 1 2
+		near "Alpha Centauri" 0 2
 	phrase
 		word
 			"Did you visit my planet yet?"

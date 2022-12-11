@@ -121,4 +121,4 @@ planet "X-283N1"
 	security 0.7
 	tribute 1100
 		threshold 50000
-		fleet "SpaceCrate Defense Force" 20
+		fleet "spacecrate_defensefleet" 20
