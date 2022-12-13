@@ -18,7 +18,7 @@ mission "spacecrate_misc_1"
 	name "Take out the trash"
 	description "<origin> produces a whole lot of garbage and noboby here wants to deal with it. Transport <cargo> to the waste recycler on <destination>. Payment is <payment>."
 	to offer
-		random < 15
+		random < 25
 		"combat rating" > 55
 	cargo "Garbage" 30 150
 	source
@@ -42,7 +42,7 @@ mission "spacecrate_misc_2"
 	name "Quafe for the Quarg"
 	description "Quarg love their <commodity>, hurry over to <destination> and deliver <cargo> by <date>. Payment is <payment>."
 	to offer
-		random < 25
+		random < 35
 		"combat rating" > 403
 	cargo "Quafe" 30 50
 	source

@@ -9,13 +9,15 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 person "Arnan de Gans"
-	frequency 1000
+	frequency 10000
 	government "SpaceCrate"
 	personality
+		timid
+		forbearing
+		disables
 		confusion 5
-		timid forbearing disables
 	system
-		near "Alpha Centauri" 0 2
+		near "Alpha Centauri" 0 4
 	phrase
 		word
 			"Did you visit my planet yet?"

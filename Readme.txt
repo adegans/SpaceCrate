@@ -35,6 +35,8 @@ you to visit his planet and make some money if you hail him.
 
 SpaceCrate is a bit of an experiment with how the plugin system works.
 
+Post your experience on the repo: https://github.com/adegans/SpaceCrate/discussions
+
 ---------------------------------------------------------------------------------------------
 - BALANCING
 
@@ -42,7 +44,7 @@ If you find any balancing issues, for example ridiculous rewards or shipments th
 into your hold... Let me know. I'm making things up as I go along and some of the numbers 
 don't mean a whole lot to me, yet!
 
-Contact me through email: Arnan de Gans <ajdegans@icloud.com>
+Post your concerns on the repo: https://github.com/adegans/SpaceCrate/discussions
 
 ---------------------------------------------------------------------------------------------
 - INSTALLATION
@@ -63,11 +65,10 @@ C:\Users\yourusername\AppData\Roaming\endless-sky\plugins\
 ---------------------------------------------------------------------------------------------
 - TODO / IDEAS
 
-	* Add more complex trade related jobs with multiple drop-offs or penalties (efficiency)
-	* Add higher paying smuggling jobs (corruption)
 	* Unlock shipyard through missions?
 	* Unlock outfitter through missions?
-	* Earn a salary working for SpaceCrate?
+
+Post your ideas on the repo: https://github.com/adegans/SpaceCrate/discussions
 
 ---------------------------------------------------------------------------------------------
 - CHANGELOG
@@ -78,13 +79,21 @@ C:\Users\yourusername\AppData\Roaming\endless-sky\plugins\
 	* Added: Reputation earned by completing a SpaceCrate Inc. missions
 	* Added: Reputation lost by failing/aborting a SpaceCrate Inc. missions
 	* Added: 'Corrupt SpaceCrate Official' to X-283N1 Spaceport to leak your reputation score
-	* Added: Missing 'stopover dialog' for all passenger pickup jobs
-	* Added: 2 missions to terminate SpaceCrate employment
+	* Added: 2 jobs to terminate SpaceCrate employment
+	* Added: 4 Delivery export missions unlocked by completing other small missions
+	* Added: 4 Large Delivery export missions unlocked by completing other medium missions
+	* Added: 4 Bulk Delivery export missions unlocked by completing other large missions
+	* Added: 4 Bulk Delivery import missions available throughout human systems
+	* Added: Small random chance on a pirate raid on Employee and Bulk Delivery missions
+	* Added: Tradefleets in all neighboring systems
+	* Tweak: Bulk cargo jobs require reputation with SpaceCrate to unlock
+	* Tweak: Slightly increased Employee cargo job payment multiplier
 	* Tweak: Slightly reduced passenger mission availability
 	* Tweak: Slightly reduced SpaceCrate fleet spawning
 	* Tweak: Government attitude to be "less caring" for other factions
 	* Tweak: Defense fleet now scans incoming ships (enforcement)
-	* Fixed: Mission availability 'random' values too high
+	* Fixed: Missing 'stopover dialog' for all passenger pickup jobs
+	* Fixed: Mission availability 'random' values were too high
 	* Fixed: Planet description readability
 	* Fixed: CEO Arnan personalities
 	* Fixed: CEO Arnan spawn locations

@@ -12,7 +12,9 @@
 # Passengers (getting them to X-283N1)
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
-# Penalties for non-delivery!!
+# Fine on failure
+# Bigger reputation gain on complete
+# Bigger reputation loss on failure
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_rush_1"
 	job
@@ -22,8 +24,9 @@ mission "spacecrate_rush_1"
 	description "Deliver <cargo> to <destination> by <date>. Payment is <payment>. Failure to deliver results in a fine."
 	cargo random 15 50
 	to offer
-		random < 80
+		random < 50
 		"combat rating" > 403
+		"reputation: SpaceCrate" > 200
 	source
 		government "SpaceCrate"
 	destination
@@ -36,7 +39,7 @@ mission "spacecrate_rush_1"
 		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
-		payment -25000
+		fine 15000
 		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_2"
@@ -47,8 +50,9 @@ mission "spacecrate_rush_2"
 	description "Deliver <cargo> to <destination> by <date>. Payment is <payment>. Failure to deliver results in a fine."
 	cargo random 10 60
 	to offer
-		random < 40
+		random < 45
 		"combat rating" > 403
+		"reputation: SpaceCrate" > 200
 	source
 		government "SpaceCrate"
 	destination
@@ -61,7 +65,7 @@ mission "spacecrate_rush_2"
 		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
-		payment -30000
+		fine 15000
 		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_3"
@@ -72,8 +76,9 @@ mission "spacecrate_rush_3"
 	description "Deliver <cargo> to <destination> by <date>. Payment is <payment>. Failure to deliver results in a fine."
 	cargo random 20 80
 	to offer
-		random < 55
+		random < 40
 		"combat rating" > 2981
+		"reputation: SpaceCrate" > 200
 	source
 		government "SpaceCrate"
 	destination
@@ -87,7 +92,7 @@ mission "spacecrate_rush_3"
 		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
-		payment -40000
+		fine 20000
 		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_4"
@@ -98,8 +103,9 @@ mission "spacecrate_rush_4"
 	description "Deliver <cargo> to <destination> by <date>. Payment is <payment>. Failure to deliver results in a fine."
 	cargo random 100 150
 	to offer
-		random < 45
+		random < 55
 		"combat rating" > 2981
+		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
 	destination
@@ -113,7 +119,7 @@ mission "spacecrate_rush_4"
 		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
-		payment -60000
+		fine 30000
 		"reputation: SpaceCrate" -= 40
 
 mission "spacecrate_rush_5"
@@ -124,8 +130,9 @@ mission "spacecrate_rush_5"
 	description "Deliver <cargo> to <destination> by <date>. Payment is <payment>. Failure to deliver results in a fine."
 	cargo random 150 475
 	to offer
-		random < 25
-		"combat rating" > 22026
+		random < 60
+		"combat rating" > 2981
+		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
 	destination
@@ -139,5 +146,5 @@ mission "spacecrate_rush_5"
 		"reputation: SpaceCrate" += 40
 		dialog phrase "generic cargo delivery payment"
 	on fail
-		payment -100000
+		fine 50000
 		"reputation: SpaceCrate" -= 40

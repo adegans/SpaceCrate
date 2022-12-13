@@ -21,7 +21,7 @@ mission "spacecrate_passenger_pickup_1"
 	description "We need more workers. Go and recruit <bunks> laborers from <stopovers> and bring them to <destination>. Payment is <payment>."
 	passengers 5 20
 	to offer
-		random < 25
+		random < 15
 		"combat rating" > 403
 	source
 		government "SpaceCrate"
@@ -48,7 +48,7 @@ mission "spacecrate_passenger_pickup_2"
 	description "We've hired new miners. Please pick up the <bunks> miners from <stopovers> and bring them to <destination>. Payment is <payment>."
 	passengers 2 8
 	to offer
-		random < 50
+		random < 30
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -102,7 +102,7 @@ mission "spacecrate_passenger_pickup_4"
 	description "We're expanding our factory workforce. There is a group of <bunks> laborers waiting on <stopovers>. Bring them to <destination>. Payment is <payment>."
 	passengers 2 10
 	to offer
-		random < 50
+		random < 25
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -129,7 +129,7 @@ mission "spacecrate_passenger_pickup_5"
 	description "Excreased profits allow for expansion. We've hired <bunks> laborers from <stopovers>. They need a ride to <destination>. Payment is <payment>."
 	passengers 8 25
 	to offer
-		random < 25
+		random < 20
 		"combat rating" > 403
 	source
 		government "SpaceCrate"
@@ -162,7 +162,7 @@ mission "spacecrate_passenger_security_1"
 	description "A new security platoon is ready to deploy. Get the 28 troopers from <stopovers> and bring them to <destination>. Payment is <payment>."
 	passengers 28
 	to offer
-		random < 15
+		random < 10
 		"combat rating" > 1097
 		"reputation: SpaceCrate" > 1000
 	source
@@ -197,7 +197,7 @@ mission "spacecrate_passenger_delivery_1"
 	description "This family of <bunks> miners is hoping to strike it rich on <destination>, they're willing to pay <payment>. This job includes a signing bonus from SpaceCrate."
 	passengers 2 6
 	to offer
-		random < 25
+		random < 15
 		"combat rating" > 20
 	source
 		distance 1 6
@@ -281,7 +281,7 @@ mission "spacecrate_passenger_delivery_4"
 	description "A group of <bunks> factory workers is hoping to find work on <destination>, they can pay you <payment> to take them there. This job includes a signing bonus from SpaceCrate."
 	passengers 2 6
 	to offer
-		random < 20
+		random < 15
 		"combat rating" > 20
 	source
 		distance 6 15

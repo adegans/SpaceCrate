@@ -87,8 +87,8 @@ news "spacecrate_onworld"
 			"Did you know CEO Arnan has a website? Visit www.arnan.me on your communicator."
 			"SpaceCrate is a terrible employer."
 			"I used to work security for SpaceCrate. Now I'm a farmer."
-			"I heard you need 10000 reputation with SpaceCrate to become an employed courier for them."
-			"Did you hear the rumors? 10000 reputation is required to get employed as a pilot for SpaceCrate."
+			"I heard you need 5000 reputation with SpaceCrate to become an employed courier for them."
+			"Did you hear the rumors? 5000 reputation is required to get employed as a pilot for SpaceCrate."
 			"A higher combat rating gets you access to higher paying jobs."
 			"I wish I could meet the CEO some day."
 			"Being a factory worker is alright. Better than shuttling around mystery cubes."
@@ -126,7 +126,7 @@ news "spacecrate_internal_2"
 	to show
 		"reputation: SpaceCrate" >= 0
 		and
-			"reputation: SpaceCrate" <= 250
+			"reputation: SpaceCrate" <= 150
 	message
 		word
 			`"Your reputation with us is pretty low."`
@@ -140,9 +140,9 @@ news "spacecrate_internal_3"
 		word
 			"Corrupt SpaceCrate Official"
 	to show
-		"reputation: SpaceCrate" >= 251
+		"reputation: SpaceCrate" >= 151
 		and
-			"reputation: SpaceCrate" <= 1000
+			"reputation: SpaceCrate" <= 500
 	message
 		word
 			`"Your reputation is slowly improving but is still not that great."`
@@ -155,9 +155,9 @@ news "spacecrate_internal_4"
 		word
 			"Corrupt SpaceCrate Official"
 	to show
-		"reputation: SpaceCrate" >= 1001
+		"reputation: SpaceCrate" >= 501
 		and
-			"reputation: SpaceCrate" <= 2500
+			"reputation: SpaceCrate" <= 1500
 	message
 		word
 			`"Your reputation is improving."`
@@ -172,9 +172,9 @@ news "spacecrate_internal_5"
 		word
 			"Corrupt SpaceCrate Official"
 	to show
-		"reputation: SpaceCrate" >= 2501
+		"reputation: SpaceCrate" >= 1501
 		and
-			"reputation: SpaceCrate" <= 5000
+			"reputation: SpaceCrate" <= 3000
 	message
 		word
 			`"Your reputation with SpaceCrate is pretty good."`
@@ -188,9 +188,9 @@ news "spacecrate_internal_6"
 		word
 			"Corrupt SpaceCrate Official"
 	to show
-		"reputation: SpaceCrate" >= 5001
+		"reputation: SpaceCrate" >= 3001
 		and
-			"reputation: SpaceCrate" <= 9999
+			"reputation: SpaceCrate" <= 5000
 	message
 		word
 			`"Your reputation with SpaceCrate is pretty high."`
@@ -204,7 +204,7 @@ news "spacecrate_internal_7"
 		word
 			"Corrupt SpaceCrate Official"
 	to show
-		"reputation: SpaceCrate" > 10000
+		"reputation: SpaceCrate" >= 5001
 	message
 		word
 			`"Your reputation with SpaceCrate is excellent. You should apply for a job with us. You'll need something the size of a Container Transport or bigger." (Check the Job Board)`
