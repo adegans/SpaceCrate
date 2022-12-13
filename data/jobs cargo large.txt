@@ -12,6 +12,7 @@
 # Large cargo export missions 
 # Offered on SpaceCrate planets
 # Requires reputation
+# No 'random'
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_export_large_1"
 	job
@@ -20,7 +21,6 @@ mission "spacecrate_export_large_1"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 150 640
 	to offer
-		random < 65
 		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
@@ -44,7 +44,6 @@ mission "spacecrate_export_large_2"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 200 300
 	to offer
-		random < 75
 		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
@@ -68,7 +67,6 @@ mission "spacecrate_export_large_3"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 165 240
 	to offer
-		random < 95
 		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
@@ -93,7 +91,6 @@ mission "spacecrate_export_large_4"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 250 375
 	to offer
-		random < 60
 		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
@@ -117,7 +114,6 @@ mission "spacecrate_export_large_5"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 250 435
 	to offer
-		random < 70
 		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
@@ -142,7 +138,6 @@ mission "spacecrate_export_large_6"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 175 520
 	to offer
-		random < 80
 		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
@@ -170,11 +165,11 @@ mission "spacecrate_export_large_6"
 mission "spacecrate_export_large_7"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Clothing" 160 425
 	to offer
-		random < 80
+		random < 75
 		"reputation: SpaceCrate" > 500
 		has "spacecrate_export_large_1: done"
 		has "spacecrate_export_large_3: done"
@@ -202,11 +197,11 @@ mission "spacecrate_export_large_7"
 mission "spacecrate_export_large_8"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
-	cargo "Metal" 200 350
+	cargo "Equipment" 200 350
 	to offer
-		random < 45
+		random < 65
 		"reputation: SpaceCrate" > 500
 		has "spacecrate_export_large_2: done"
 		has "spacecrate_export_large_4: done"
@@ -234,11 +229,11 @@ mission "spacecrate_export_large_8"
 mission "spacecrate_export_large_9"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
-	cargo "Plastic" 300 475
+	cargo "Luxury Goods" 300 475
 	to offer
-		random < 75
+		random < 70
 		"reputation: SpaceCrate" > 500
 		has "spacecrate_export_large_1: done"
 		has "spacecrate_export_large_2: done"
@@ -267,11 +262,11 @@ mission "spacecrate_export_large_9"
 mission "spacecrate_export_large_10"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Equipment" 225 640
 	to offer
-		random < 95
+		random < 60
 		"reputation: SpaceCrate" > 500
 		has "spacecrate_export_large_4: done"
 		has "spacecrate_export_large_5: done"
@@ -307,11 +302,11 @@ mission "spacecrate_export_large_10"
 mission "spacecrate_import_large_1"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Metal" 160 425
 	to offer
-		random < 50
+		random < 40
 		"reputation: SpaceCrate" > 700
 	source
 		distance 8 16
@@ -329,11 +324,11 @@ mission "spacecrate_import_large_1"
 mission "spacecrate_import_large_2"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo "Heavy Metals" 200 350
 	to offer
-		random < 45
+		random < 65
 		"reputation: SpaceCrate" > 700
 	source
 		distance 9 14
@@ -351,11 +346,11 @@ mission "spacecrate_import_large_2"
 mission "spacecrate_import_large_3"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Plastic" 300 475
 	to offer
-		random < 65
+		random < 50
 		"reputation: SpaceCrate" > 700
 	source
 		distance 8 18
@@ -373,11 +368,11 @@ mission "spacecrate_import_large_3"
 mission "spacecrate_import_large_4"
 	job
 	repeat
-	name "Bulk delivery to  <planet>"
+	name "Bulk delivery to <planet>"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
-	cargo "Equipment" 225 640
+	cargo "Industrial" 225 640
 	to offer
-		random < 35
+		random < 75
 		"reputation: SpaceCrate" > 700
 	source
 		distance 10 14

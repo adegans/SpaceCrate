@@ -21,6 +21,10 @@ phrase "spacecrate_callsigns_1"
 		digit
 	phrase
 		digit
+	phrase
+		digit
+	phrase
+		digit
 
 # SpaceCrate Defence Fleet
 phrase "spacecrate_callsigns_2"
@@ -30,14 +34,10 @@ phrase "spacecrate_callsigns_2"
 		digit
 	phrase
 		digit
-	phrase
-		digit
-	phrase
-		digit
 
 # ------------------------------------------------------------------------------------------
 # Merchant fleet
-# They're a lousy shot, but bring in the credits!
+# They're a lousy shot, but they bring in the credits!
 # ------------------------------------------------------------------------------------------
 fleet "spacecrate_merchantfleet"
 	government "SpaceCrate"

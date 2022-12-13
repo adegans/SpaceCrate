@@ -7,31 +7,35 @@
 ---------------------------------------------------------------------------------------------
 - WHAT TO EXPECT FROM SPACECRATE
 
-SpaceCrate is a trade mod focused on lucrative deals from a trade hub perspective.
-I've added a rich planet called X-283N1 whose people are obsessed with trade and exports.
-An implied silly 'narrative' exists appointing Arnan (me) as its CEO running the place. 
-The people on X-283N1 love trade and exports so much that they have no time for petty 
-politics. All they want is to ship stuff to the galaxy. And they're willing to pay.
+SpaceCrate is a trade mod focused on lucrative deals from a trade planet perspective.
+In Alpha Centauri you'll find a rich planet called X-283N1 whose people are obsessed with 
+trade and exports. An implied silly 'narrative' exists appointing Arnan (me) as its CEO 
+running the place. The people on X-283N1 love trade and exports so much that they have no 
+time for petty politics. All they want is to ship stuff to the galaxy. And they're willing 
+to pay.
 
-The riches this implies of-course attracts workers from all over the galaxy (passenger jobs 
-in most human systems) this in turn results in shipments of all sizes being produced ready 
-for export (cargo jobs). Higher paying and more challenging jobs (bulk shipments/rush jobs) 
-are unlocked as your combat rating goes up. With all common jobs accessible once you reach 
-level 10. 
+Their obsession with exports requires a lot of imports as well. Notably raw materials. You
+will find Bulk Deliveries aimed at X-283N1 throughout many systems, as well as prospecting 
+passengers who want to travel to the planet to find a new career. This in turn results in 
+shipments of all sizes being ready for export. Higher paying and more challenging jobs are 
+unlocked as your reputation and combat rating goes up.
 
-With doing jobs and to some extend killing pirates you gain reputation with SpaceCrate Inc.
-Once your reputation is sufficiently highCEO Arnan sends out a recruiter to give you a job 
-with a salary through a basic story line. Completing the story line will unlock even larger 
-and riskier jobs normally reserved for the inner circle of SpaceCrate.
+You gain reputation with SpaceCrate Inc. by doing jobs and to some extend killing pirates.
+Once your reputation is sufficiently high CEO Arnan sends out a recruiter to give you a job 
+with a salary through a basic story line. Completing the story line successfully will 
+unlock employee missions, which are larger and riskier jobs normally reserved for the inner 
+circle of SpaceCrate.
 
-Other than a few illicit jobs you will not find fighting jobs or other combat related 
+Other than a few illicit jobs you will not find fighting missions or other combat related 
 activities in this plugin as that is not what this mod is for. Instead the mod relies on 
 already available mechanics to create a (pirate) threat for your growing merchant fleet. 
 The planet does have a sizable defense force that will attack you like a bunch of mad 
-pirates should you contest the planet.
+pirates should you contest the planet. Some jobs require a combat rating to be offered.
 
 You'll see CEO Arnan fly in and around Alpha Centauri in his ship 'StarGoose' encouraging 
-you to visit his planet and make some money if you hail him.
+you to visit his planet and make some money. Regular trade fleets can be seen flying near 
+Alpha Centauri sometimes with witty remarks or hints about the various jobs and perks 
+SpaceCrate has to offer.
 
 SpaceCrate is a bit of an experiment with how the plugin system works.
 
@@ -67,6 +71,8 @@ C:\Users\yourusername\AppData\Roaming\endless-sky\plugins\
 
 	* Unlock shipyard through missions?
 	* Unlock outfitter through missions?
+	* Specialized SpaceCrate cargo ships?
+	* Set up trade outposts (stations) in the region through missions?
 
 Post your ideas on the repo: https://github.com/adegans/SpaceCrate/discussions
 
@@ -74,30 +80,33 @@ Post your ideas on the repo: https://github.com/adegans/SpaceCrate/discussions
 - CHANGELOG
 
 0.3
-	* Added: Short storyline to get employed by SpaceCrate once your reputation is high enough
+	* Added: Get a high enough reputation and unlock a short storyline to get employed by SpaceCrate Inc.
 	* Added: Exclusive employee missions with higher rewards and risks (optional)
-	* Added: Reputation earned by completing a SpaceCrate Inc. missions
+	* Added: Reputation earned by completing SpaceCrate Inc. missions
 	* Added: Reputation lost by failing/aborting a SpaceCrate Inc. missions
+	* Added: Reputation earned by killing pirates
 	* Added: 'Corrupt SpaceCrate Official' to X-283N1 Spaceport to leak your reputation score
-	* Added: 2 jobs to terminate SpaceCrate employment
 	* Added: 4 Delivery export missions unlocked by completing other small missions
 	* Added: 4 Large Delivery export missions unlocked by completing other medium missions
 	* Added: 4 Bulk Delivery export missions unlocked by completing other large missions
 	* Added: 4 Bulk Delivery import missions available throughout human systems
+	* Added: 2 jobs to terminate SpaceCrate employment
 	* Added: Small random chance on a pirate raid on Employee and Bulk Delivery missions
-	* Added: Tradefleets in all neighboring systems
-	* Tweak: Bulk cargo jobs require reputation with SpaceCrate to unlock
-	* Tweak: Slightly increased Employee cargo job payment multiplier
+	* Added: Trade fleets in many neighboring systems
+	* Added: Hails attempting to be funny
+	* Added: Hails dropping hints about things to do in SpaceCrate (Similar to spaceport hints)
+	* Tweak: Bulk cargo jobs now require reputation with SpaceCrate to unlock
 	* Tweak: Slightly reduced passenger mission availability
-	* Tweak: Slightly reduced SpaceCrate fleet spawning
 	* Tweak: Government attitude to be "less caring" for other factions
 	* Tweak: Defense fleet now scans incoming ships (enforcement)
+	* Tweak: Ship callsigns
+	* Tweak: SpaceCrate Inc 'Yellow' now slightly less bright.
 	* Fixed: Missing 'stopover dialog' for all passenger pickup jobs
 	* Fixed: Mission availability 'random' values were too high
 	* Fixed: Planet description readability
 	* Fixed: CEO Arnan personalities
 	* Fixed: CEO Arnan spawn locations
-	* Fixed: Duplicate ships in fleet variants
+	* Fixed: Removed duplicate ships in fleet variants
 
 0.2
 	* Fixed: Several passenger mission descriptions

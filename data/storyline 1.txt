@@ -192,7 +192,7 @@ mission "spacecrate_story_signup_5"
 		"salary: SpaceCrate" = 10000
 		set "spacecrate_employee"
 		conversation
-			`John steps into the cockpit as you land. "I'm impressed with your work." He says. "I've taken the liberty of signing you on as a SpaceCrate Logistics Courier."`
+			`John steps into the cockpit as you land. "I'm impressed with your work." He says. "I've taken the liberty of signing you on as a SpaceCrate Inc. Logistics Courier."`
 			`"The main perks are that you'll be authorized for larger shipments and on top of that you'll get a salary of $10k a day." John continues.`
 			`"As our business continues to expand more jobs and assignments may become available in the future. So welcome aboard, and good luck with your endeavors!!"`
 			`"Clearance for the new jobs will take a days or so to process but I trust you'll find them on the Job Board soon enough!" And with that John walks off, leaving you alone.`

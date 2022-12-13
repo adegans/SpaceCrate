@@ -11,6 +11,7 @@
 # ------------------------------------------------------------------------------------------
 # Small cargo export missions 
 # Offered on SpaceCrate planets
+# No 'random'
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_export_small_1"
 	job
@@ -19,7 +20,6 @@ mission "spacecrate_export_small_1"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 20
 	to offer
-		random < 80
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -40,7 +40,7 @@ mission "spacecrate_export_small_2"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 15 30
 	to offer
-		random < 60
+		"combat rating" > 20
 	source
 		government "SpaceCrate"
 	destination
@@ -60,7 +60,6 @@ mission "spacecrate_export_small_3"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 30 45
 	to offer
-		random < 60
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -82,7 +81,6 @@ mission "spacecrate_export_small_4"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 35
 	to offer
-		random < 75
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -103,7 +101,6 @@ mission "spacecrate_export_small_5"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 2 14
 	to offer
-		random < 95
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -125,7 +122,6 @@ mission "spacecrate_export_small_6"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 2 9
 	to offer
-		random < 60
 		"combat rating" > 20
 	source
 		government "SpaceCrate"
@@ -153,7 +149,7 @@ mission "spacecrate_export_small_7"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Food" 10 25
 	to offer
-		random < 50
+		random < 80
 		has "spacecrate_export_small_1: done"
 		has "spacecrate_export_small_3: done"
 		has "spacecrate_export_small_5: done"
@@ -176,7 +172,7 @@ mission "spacecrate_export_small_8"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo "military" 20 35
 	to offer
-		random < 60
+		random < 80
 		has "spacecrate_export_small_2: done"
 		has "spacecrate_export_small_4: done"
 		has "spacecrate_export_small_6: done"
@@ -199,7 +195,7 @@ mission "spacecrate_export_small_9"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Medical" 30 40
 	to offer
-		random < 55
+		random < 60
 		has "spacecrate_export_small_1: done"
 		has "spacecrate_export_small_2: done"
 		has "spacecrate_export_small_3: done"
@@ -222,7 +218,7 @@ mission "spacecrate_export_small_10"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Luxury Goods" 15 25
 	to offer
-		random < 75
+		random < 60
 		has "spacecrate_export_small_4: done"
 		has "spacecrate_export_small_5: done"
 		has "spacecrate_export_small_6: done"

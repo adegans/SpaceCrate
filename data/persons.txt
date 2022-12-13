@@ -12,12 +12,10 @@ person "Arnan de Gans"
 	frequency 10000
 	government "SpaceCrate"
 	personality
-		timid
-		forbearing
-		disables
+		timid forbearing disables
 		confusion 5
 	system
-		near "Alpha Centauri" 0 4
+		near "Alpha Centauri" 0 2
 	phrase
 		word
 			"Did you visit my planet yet?"

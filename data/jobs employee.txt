@@ -22,7 +22,7 @@ mission "spacecrate_export_employee_1"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 150 300
 	to offer
-		random < 35
+		random < 65
 		"spacecrate_employee" > 0
 		"reputation: SpaceCrate" > 5000
 	source
@@ -46,7 +46,7 @@ mission "spacecrate_export_employee_2"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 300 450
 	to offer
-		random < 35
+		random < 50
 		"spacecrate_employee" > 0
 		"reputation: SpaceCrate" > 5000
 	source
@@ -118,7 +118,7 @@ mission "spacecrate_import_employee_1"
 	description "Deliver <cargo> to <destination>. Payment is <payment>. As a SpaceCrate employee this "
 	cargo "Metal" 100 200
 	to offer
-		random < 60
+		random < 65
 		"spacecrate_employee" > 0
 		"reputation: SpaceCrate" > 5000
 	source
@@ -143,7 +143,7 @@ mission "spacecrate_import_employee_2"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo "Plastic" 210 320
 	to offer
-		random < 65
+		random < 50
 		"spacecrate_employee" > 0
 		"reputation: SpaceCrate" > 5000
 	source
@@ -176,7 +176,7 @@ mission "spacecrate_import_employee_3"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo "Heavy Metals" 350 520
 	to offer
-		random < 70
+		random < 35
 		"spacecrate_employee" > 0
 		"reputation: SpaceCrate" > 5000
 	source
@@ -360,7 +360,7 @@ mission "spacecrate_export_illegal_3"
 	on visit
 		dialog "The longer you linger around, the bigger the chance you'll get caught!"
 	on complete
-		payment 350000
+		payment 450000
 		"reputation: Pirate" += 5
 		"reputation: SpaceCrate" += 50
 		"reputation: Republic" -= 3
@@ -381,7 +381,7 @@ mission "spacecrate_employee_quit_1"
 	job
 	repeat
 	name "Quit working for SpaceCrate - Dangerous"
-	description "You steal a shipment of Quafe from the factory to offer to the Quarg in <destination> as a gift. The Quarg might reward you, but the SpaceCrate Defense Fleet will definitely hunt you down and terminate your employment."
+	description "You've stolen a shipment of Quafe from the factory to offer to the Quarg in <destination> as a gift. The Quarg might reward you, but the SpaceCrate Defense Fleet will definitely hunt you down and terminate your employment."
 	cargo "Quafe" 20 60
 	to offer
 		"combat rating" > 8103
