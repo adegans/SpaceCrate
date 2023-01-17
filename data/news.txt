@@ -51,7 +51,7 @@ news "spacecrate_offworld"
 news "spacecrate_onworld"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Factory worker"
 			"Merchant"
@@ -72,7 +72,7 @@ news "spacecrate_onworld"
 			"Production line assistant"
 			"Plumber"
 			"Factory button pusher"
-			"Banana straigthener"
+			"Banana straightener"
 			"Corporate assistant"
 			"Automation manager"
 			"Syringe tester"
@@ -106,7 +106,7 @@ news "spacecrate_onworld"
 news "spacecrate_internal_1"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Corrupt SpaceCrate Official"
 	to show
@@ -120,7 +120,7 @@ news "spacecrate_internal_1"
 news "spacecrate_internal_2"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Corrupt SpaceCrate Official"
 	to show
@@ -130,13 +130,14 @@ news "spacecrate_internal_2"
 	message
 		word
 			`"Your reputation with us is pretty low."`
+			`"You must have lost a lot of cargo to get a reputation this bad!"`
 			`"With such a low reputation you should not expect much attention from the higher ups."`
 			`"If you want a chance at that paycheck you'll need more than a low reputation."`
 
 news "spacecrate_internal_3"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Corrupt SpaceCrate Official"
 	to show
@@ -147,11 +148,12 @@ news "spacecrate_internal_3"
 		word
 			`"Your reputation is slowly improving but is still not that great."`
 			`"You have much to do to reach an excellent reputation. It's pretty low right now."`
+			`"If you want a chance at that paycheck you'll need a higher reputation."`
 
 news "spacecrate_internal_4"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Corrupt SpaceCrate Official"
 	to show
@@ -162,13 +164,14 @@ news "spacecrate_internal_4"
 		word
 			`"Your reputation is improving."`
 			`"I'm pleased with your improved reputation."`
+			`"You have much to do to reach an excellent reputation. It's pretty low right now."`
 			`"Still a long way to be excellent, but your reputation is improving."`
 			`"I shouldn't tell you this, but your reputation is improving."`
 
 news "spacecrate_internal_5"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Corrupt SpaceCrate Official"
 	to show
@@ -178,13 +181,14 @@ news "spacecrate_internal_5"
 	message
 		word
 			`"Your reputation with SpaceCrate is pretty good."`
+			`"You have much to do to reach an excellent reputation. It's not very high right now."`
 			`"Your hard work is paying off. Your reputation is pretty good."`
 			`"Some of the SpaceCrate stockholders are starting to notice your good reputation."`
 
 news "spacecrate_internal_6"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Corrupt SpaceCrate Official"
 	to show
@@ -194,19 +198,20 @@ news "spacecrate_internal_6"
 	message
 		word
 			`"Your reputation with SpaceCrate is pretty high."`
+			`"Some of the SpaceCrate stockholders are starting to notice your reputation."`
 			`"I shouldn't say this. But you have earned a high reputation with SpaceCrate."`
-			`"High reputation is impressive. That emplyment contract is within sight."`
+			`"High reputation is impressive. That employment contract is within sight."`
 
 news "spacecrate_internal_7"
 	location
 		government "SpaceCrate"
-	name 
+	name
 		word
 			"Corrupt SpaceCrate Official"
 	to show
 		"reputation: SpaceCrate" >= 5001
 	message
 		word
-			`"Your reputation with SpaceCrate is excellent. You should apply for a job with us. You'll need something the size of a Container Transport or bigger." (Check the Job Board)`
-			`"You've impressed the stockholders. If you have a Container Transport or bigger you should apply for a job with us." (Check the Job Board)`
-			`"With an excellent track record like this... You should apply for a job with us. Make sure you can carry about 500 tons of cargo." (Check the Job Board)`
+			`"Your reputation with SpaceCrate is excellent. You should apply for a job with us. You'll need something the size of a Container Transport or bigger. Land on X-283N1 to meet the recruiter."`
+			`"You've impressed the stockholders. If you have a Container Transport or bigger you should apply for a job with us. Land on X-283N1 to meet the recruiter."`
+			`"With an excellent track record like this... You should apply for a job with us. Make sure you can carry about 500 tons of cargo. Land on X-283N1 to meet the recruiter."`

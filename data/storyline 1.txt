@@ -13,7 +13,7 @@
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_story_signup_1"
-	name "SpaceCrate - Employment oppurtunity"
+	name "SpaceCrate - Employment opportunity"
 	description "Travel 6 jumps to <destination> where you'll pick up raw materials and join a merchant fleet."
 	autosave
 	landing
@@ -26,7 +26,7 @@ mission "spacecrate_story_signup_1"
 		"spacecrate_career_reset" == 0
 	on offer
 		conversation
-			`While wiping bugs of your windshielp a SpaceCrate official approaches you with a brisk walk "Good day!" he shouts up at you, "It has come to our attention that you've gained quite the reputation with SpaceCrate Inc. as a reliable courier.`
+			`While wiping bugs of your windshield a SpaceCrate official approaches you with a brisk walk "Good day!" he shouts up at you, "It has come to our attention that you've gained quite the reputation with SpaceCrate Inc. as a reliable courier.`
 			`As such I've been authorized by CEO Arnan de Gans himself to recommend you for a position in our organization. Would you be interested in working for SpaceCrate Inc. on a more regular basis?`
 			`We'll do a trial of a few missions first. At the end of the trial you'll be awarded 1 million credits for your efforts if you accept the position."`
 			choice
@@ -52,12 +52,12 @@ mission "spacecrate_story_signup_1"
 		log "You accepted the SpaceCrate offer to possibly work for them."
 	on complete
 		dialog `You land at the spaceport and a message pops onto your comlog "This is port control. Please wait in the spaceport lounge while we load the shipment."`
-		log "The first part of the SpaceCrate Recruiment Program went well and you're ready to continue."
+		log "The first part of the SpaceCrate Recruitment Program went well and you're ready to continue."
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
-		log "You have failed or rejected an essential part of the SpaceCrate Recruiment Program."
+		dialog "You have failed an essential part of the SpaceCrate Recruitment Program. Please re-apply in 6 months."
+		log "You have failed or rejected an essential part of the SpaceCrate Recruitment Program."
 
 mission "spacecrate_story_signup_2"
 	name "SpaceCrate - The great haul"
@@ -72,13 +72,13 @@ mission "spacecrate_story_signup_2"
 		"cargo space" >= 450
 	npc accompany save
 		government "SpaceCrate"
-		personality 
+		personality
 			confusion 15
 			escort opportunistic
 		fleet "spacecrate_missionfleet_1"
 	on offer
 		conversation
-			`As you sit in the spaceport watching the many ships you see a port official aproaching you. "Are you ready to head back to <destination>?" he asks? "The fleet is almost ready to depart."`
+			`As you sit in the spaceport watching the many ships you see a port official approaching you. "Are you ready to head back to <destination>?" he asks? "The fleet is almost ready to depart."`
 			choice
 				`	"Ok! We can leave in a couple of minutes."`
 					goto yes
@@ -96,12 +96,12 @@ mission "spacecrate_story_signup_2"
 		log "You're flying in a large fleet of transport ships as part of the SpaceCrate Recruitment Program."
 	on complete
 		dialog `You touch down at <destination>. John waves from the landing pad. "Excellent job <first>. Meet me in the spaceport when you're ready for the next assignment."`
-		log "The second part of the SpaceCrate Recruiment Program went smoothly as well and you're ready to continue."
+		log "The second part of the SpaceCrate Recruitment Program went smoothly as well and you're ready to continue."
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
-		log "You have failed or rejected an essential part of the SpaceCrate Recruiment Program."
+		dialog "You have failed an essential part of the SpaceCrate Recruitment Program. Please re-apply in 6 months."
+		log "You have failed or rejected an essential part of the SpaceCrate Recruitment Program."
 
 mission "spacecrate_story_signup_3"
 	name "SpaceCrate - The new manager"
@@ -127,12 +127,12 @@ mission "spacecrate_story_signup_3"
 		log "You're tasked to shuttle a SpaceCrate exec around to recruit someone as part of the SpaceCrate Recruitment Program."
 	on complete
 		dialog `"Consider yourself at liberty for the rest of the day. Meet me in the spaceport tomorrow morning." John informs you before heading into the spaceport himself.`
-		log "The third part of the SpaceCrate Recruiment Program was a long one but it went well enough."
+		log "The third part of the SpaceCrate Recruitment Program was a long one but it went well enough."
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed or rejected an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
-		log "You have failed or rejected an essential part of the SpaceCrate Recruiment Program."
+		dialog "You have failed or rejected an essential part of the SpaceCrate Recruitment Program. Please re-apply in 6 months."
+		log "You have failed or rejected an essential part of the SpaceCrate Recruitment Program."
 
 mission "spacecrate_story_signup_4"
 	name "SpaceCrate - A slight detour"
@@ -147,9 +147,9 @@ mission "spacecrate_story_signup_4"
 	on offer
 		conversation
 			`John meets you in the Spaceport the next day and introduces Justine, a timid looking woman, as the newly recruited manager.`
-			`"Justine is the new Banana Straigthener plant manager." John says with a smile, "But on one condition, remember?" Justine quickly interjects. "We have to go to Pearl to pick up some of my personal things.""`
+			`"Justine is the new Banana Straightener plant manager." John says with a smile, "But on one condition, remember?" Justine quickly interjects. "We have to go to Pearl to pick up some of my personal things.""`
 			choice
-				"	Shruggs. We'll leave in a minute!"
+				"	Shrugs. We'll leave in a minute!"
 					accept
 				"	I've got other things to do. Cya!"
 					decline
@@ -157,16 +157,16 @@ mission "spacecrate_story_signup_4"
 		log "After picking up the new SpaceCrate manager you're ready to head back and finish your SpaceCrate Recruitment Program trial."
 	on complete
 		dialog `John lets you know we'll be moving on soon, so refuel the ship and wait in the spaceport for us.`
-		log "The fourth part of the SpaceCrate Recruiment Program was easy enough."
+		log "The fourth part of the SpaceCrate Recruitment Program was easy enough."
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed or rejected an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
-		log "You have failed or rejected an essential part of the SpaceCrate Recruiment Program."
+		dialog "You have failed or rejected an essential part of the SpaceCrate Recruitment Program. Please re-apply in 6 months."
+		log "You have failed or rejected an essential part of the SpaceCrate Recruitment Program."
 
 mission "spacecrate_story_signup_5"
 	name "SpaceCrate - Getting the job"
-	description "Finally head back to <destination> and finish up your recruiment trial."
+	description "Finally head back to <destination> and finish up your recruitment trial."
 	passengers 2
 	cargo "Justine's personal items" 2
 	source "Pearl"
@@ -189,16 +189,16 @@ mission "spacecrate_story_signup_5"
 		log "You're headed back and finish your SpaceCrate Recruitment Program trial."
 	on complete
 		payment 1000000
-		"salary: SpaceCrate" = 10000
+		"salary: SpaceCrate" = 20000
 		set "spacecrate_employee"
 		conversation
 			`John steps into the cockpit as you land. "I'm impressed with your work." He says. "I've taken the liberty of signing you on as a SpaceCrate Inc. Logistics Courier."`
-			`"The main perks are that you'll be authorized for larger shipments and on top of that you'll get a salary of $10k a day." John continues.`
+			`"The main perks are that you'll be authorized for larger shipments and on top of that you'll get a salary of $20k a day." John continues.`
 			`"As our business continues to expand more jobs and assignments may become available in the future. So welcome aboard, and good luck with your endeavors!!"`
 			`"Clearance for the new jobs will take a days or so to process but I trust you'll find them on the Job Board soon enough!" And with that John walks off, leaving you alone.`
-		log "Congratulations! After the fifth part of the SpaceCrate Recruiment Program concludes you're signed up to be a Logistics Courier for SpaceCrate."
+		log "Congratulations! After the fifth part of the SpaceCrate Recruitment Program concludes you're signed up to be a Logistics Courier for SpaceCrate. The salary allows you to operate larger fleets to ship larger cargo jobs."
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180
-		dialog "You have failed or rejected an essential part of the SpaceCrate Recruiment Program. Please re-apply in 6 months."
-		log "You have failed or rejected an essential part of the SpaceCrate Recruiment Program."
+		dialog "You have failed or rejected an essential part of the SpaceCrate Recruitment Program. Please re-apply in 6 months."
+		log "You have failed or rejected an essential part of the SpaceCrate Recruitment Program."

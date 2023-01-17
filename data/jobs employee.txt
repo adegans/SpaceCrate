@@ -9,7 +9,7 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 # ------------------------------------------------------------------------------------------
-# Exployee exclusive cargo export missions 
+# Employee exclusive cargo export missions
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
 # Does not require combat rating
@@ -103,9 +103,9 @@ mission "spacecrate_export_employee_3"
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20
-		
+
 # ------------------------------------------------------------------------------------------
-# Exployee exclusive cargo import missions 
+# Employee exclusive cargo import missions
 # Offered in different systems shipping raw materials to X-283N1
 # ------------------------------------------------------------------------------------------
 # Source planets require 'raw materials' related attributes
@@ -201,9 +201,9 @@ mission "spacecrate_import_employee_3"
 		dialog phrase "generic cargo delivery payment"
 	on fail
 		"reputation: SpaceCrate" -= 20
-		
+
 # ------------------------------------------------------------------------------------------
-# Exployee exclusive illegal missions 
+# Employee exclusive illegal missions
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
 # Fixed payments
@@ -252,7 +252,7 @@ mission "spacecrate_export_illegal_1"
 		dialog phrase "generic aborted pirate cargo mission"
 	on fail
 		"reputation: SpaceCrate" -= 10
-		
+
 mission "spacecrate_export_illegal_2"
 	job
 	repeat
@@ -307,7 +307,7 @@ mission "spacecrate_export_illegal_2"
 	on fail
 		"reputation: Pirate" -= 2
 		"reputation: SpaceCrate" -= 50
-		
+
 mission "spacecrate_export_illegal_3"
 	job
 	repeat
@@ -349,7 +349,7 @@ mission "spacecrate_export_illegal_3"
 				"Quicksilver (Scanner)"
 	npc
 		government Syndicate
-		personality	
+		personality
 			heroic
 			entering
 		system destination
@@ -372,7 +372,7 @@ mission "spacecrate_export_illegal_3"
 	on fail
 		"reputation: Pirate" -= 2
 		"reputation: SpaceCrate" -= 50
-		
+
 # ------------------------------------------------------------------------------------------
 # Job termination
 # Offered on SpaceCrate planets
@@ -394,7 +394,7 @@ mission "spacecrate_employee_quit_1"
 		near "Tarazed" 1 2
 	npc
 		government "SpaceCrate"
-		personality	
+		personality
 			nemesis
 			opportunistic
 			heroic
@@ -403,27 +403,27 @@ mission "spacecrate_employee_quit_1"
 		fleet "spacecrate_missionfleet_2"
 	npc
 		government "SpaceCrate"
-		personality	
+		personality
 			nemesis
 			opportunistic
 			heroic
 			entering
-		system 
+		system
 			near "Cebalrai" 0 2
 		fleet "spacecrate_missionfleet_2"
 	npc
 		government "SpaceCrate"
-		personality	
+		personality
 			nemesis
 			opportunistic
 			heroic
 			entering
-		system 
+		system
 			near "Dabih" 0 1
 		fleet "spacecrate_missionfleet_2" 2
 	npc
 		government "SpaceCrate"
-		personality	
+		personality
 			nemesis
 			opportunistic
 			heroic
@@ -442,7 +442,7 @@ mission "spacecrate_employee_quit_1"
 		clear "spacecrate_story_signup_4: done"
 		clear "spacecrate_story_signup_5: done"
 		dialog "The Quarg look pleasantly surprised with your unexpected gift and give you a 'finders fee' of <payment>."
-		dialog "You get a message from SpaceCrate HR expressing their dissapointment and they notify you of the termination of your employment as well as a loss of reputation."
+		dialog "You get a message from SpaceCrate HR expressing their disappointment and they notify you of the termination of your employment as well as a loss of reputation."
 	on fail
 		fine 100000
 		"reputation: SpaceCrate" = 2
@@ -476,7 +476,7 @@ mission "spacecrate_employee_quit_2"
 	on complete
 		payment 300000
 		"reputation: SpaceCrate" = 4000
-		"reputation: Reublic" -= 2
+		"reputation: Republic" -= 2
 		clear "spacecrate_employee"
 		clear "salary: SpaceCrate"
 		clear "spacecrate_story_signup_1: done"

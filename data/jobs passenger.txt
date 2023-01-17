@@ -126,7 +126,7 @@ mission "spacecrate_passenger_pickup_5"
 	job
 	repeat
 	name "Pick up group of laborers"
-	description "Excreased profits allow for expansion. We've hired <bunks> laborers from <stopovers>. They need a ride to <destination>. Payment is <payment>."
+	description "Increased profits allow for expansion. We've hired <bunks> laborers from <stopovers>. They need a ride to <destination>. Payment is <payment>."
 	passengers 8 25
 	to offer
 		random < 50
@@ -139,7 +139,7 @@ mission "spacecrate_passenger_pickup_5"
 		attributes "spaceport"
 		not attributes "station"
 	on stopover
-		dialog "After some searhing you find the laborers for <destination> and tell them to hurry onto your ship."
+		dialog "After some searching you find the laborers for <destination> and tell them to hurry onto your ship."
 	on visit
 		dialog phrase "generic passenger on visit"
 	on complete

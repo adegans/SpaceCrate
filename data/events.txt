@@ -14,3 +14,13 @@
 # ------------------------------------------------------------------------------------------
 event "spacecrate_career_application_reset"
 	clear "spacecrate_career_reset"
+
+# ------------------------------------------------------------------------------------------
+# Event timer for the 'A Wild Goose Chase' side story
+# Activates 3 years after story completes
+# ------------------------------------------------------------------------------------------
+event "spacecrate_story_goosechase_reset"
+	clear "spacecrate_story_goosechase_1: done"
+	clear "spacecrate_story_goosechase_2: done"
+	clear "spacecrate_story_goosechase_3: done"
+	clear "spacecrate_story_goosechase_4: done"

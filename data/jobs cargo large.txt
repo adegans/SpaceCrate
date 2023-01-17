@@ -9,7 +9,7 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 # ------------------------------------------------------------------------------------------
-# Large cargo export missions 
+# Large cargo export missions
 # Offered on SpaceCrate planets
 # Requires reputation
 # No 'random'
@@ -156,7 +156,7 @@ mission "spacecrate_export_large_6"
 		"reputation: SpaceCrate" -= 20
 
 # ------------------------------------------------------------------------------------------
-# Large cargo export missions 
+# Large cargo export missions
 # Offered on SpaceCrate planets after completing the first 6
 # ------------------------------------------------------------------------------------------
 # Does not require combat rating
@@ -290,9 +290,9 @@ mission "spacecrate_export_large_10"
 		payment
 		"reputation: SpaceCrate" += 10
 		dialog phrase "generic cargo delivery payment"
-		
+
 # ------------------------------------------------------------------------------------------
-# Large cargo import missions 
+# Large cargo import missions
 # Offered in different systems shipping raw materials to X-283N1
 # ------------------------------------------------------------------------------------------
 # Source planets require 'raw materials' related attributes
