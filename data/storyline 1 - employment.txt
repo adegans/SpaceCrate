@@ -14,16 +14,15 @@
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_story_signup_1"
 	name "SpaceCrate - Employment opportunity"
-	description "Travel 6 jumps to <destination> where you'll pick up raw materials and join a merchant fleet."
+	description "Travel to <destination> where you'll pick up raw materials and join a merchant fleet. This is a 5 part storyline."
 	autosave
-	landing
 	source "X-283N1"
 	destination "Antipode"
 	to offer
+		not "spacecrate_employee"
+		not "spacecrate_career_reset"
 		"reputation: SpaceCrate" > 5000
 		"cargo space" >= 450
-		"spacecrate_employee" == 0
-		"spacecrate_career_reset" == 0
 	on offer
 		conversation
 			`While wiping bugs of your windshield a SpaceCrate official approaches you with a brisk walk "Good day!" he shouts up at you, "It has come to our attention that you've gained quite the reputation with SpaceCrate Inc. as a reliable courier.`
@@ -68,7 +67,9 @@ mission "spacecrate_story_signup_2"
 	destination "X-283N1"
 	to offer
 		has "spacecrate_story_signup_1: done"
-		"reputation: SpaceCrate" > 5000
+		not "spacecrate_employee"
+		not "spacecrate_career_reset"
+		"reputation: SpaceCrate" >= 5000
 		"cargo space" >= 450
 	npc accompany save
 		government "SpaceCrate"
@@ -112,7 +113,9 @@ mission "spacecrate_story_signup_3"
 	destination "Skillet"
 	to offer
 		has "spacecrate_story_signup_2: done"
-		"reputation: SpaceCrate" > 5000
+		not "spacecrate_employee"
+		not "spacecrate_career_reset"
+		"reputation: SpaceCrate" >= 5000
 		"passenger space" >= 1
 	on offer
 		conversation
@@ -142,12 +145,14 @@ mission "spacecrate_story_signup_4"
 	destination "Pearl"
 	to offer
 		has "spacecrate_story_signup_3: done"
-		"reputation: SpaceCrate" > 5000
+		not "spacecrate_employee"
+		not "spacecrate_career_reset"
+		"reputation: SpaceCrate" >= 5000
 		"passenger space" >= 2
 	on offer
 		conversation
 			`John meets you in the Spaceport the next day and introduces Justine, a timid looking woman, as the newly recruited manager.`
-			`"Justine is the new Banana Straightener plant manager." John says with a smile, "But on one condition, remember?" Justine quickly interjects. "We have to go to Pearl to pick up some of my personal things.""`
+			`"Justine is the new Banana Straightening plant manager." John says with a smile, "But on one condition, remember?" Justine quickly interjects. "We have to go to Pearl to pick up some of my personal things.""`
 			choice
 				"	Shrugs. We'll leave in a minute!"
 					accept
@@ -167,13 +172,17 @@ mission "spacecrate_story_signup_4"
 mission "spacecrate_story_signup_5"
 	name "SpaceCrate - Getting the job"
 	description "Finally head back to <destination> and finish up your recruitment trial."
+	autosave
+	onland
 	passengers 2
 	cargo "Justine's personal items" 2
 	source "Pearl"
 	destination "X-283N1"
 	to offer
 		has "spacecrate_story_signup_4: done"
-		"reputation: SpaceCrate" > 5000
+		not "spacecrate_employee"
+		not "spacecrate_career_reset"
+		"reputation: SpaceCrate" >= 5000
 		"passenger space" >= 2
 		"cargo space" >= 2
 	on offer
@@ -195,8 +204,8 @@ mission "spacecrate_story_signup_5"
 			`John steps into the cockpit as you land. "I'm impressed with your work." He says. "I've taken the liberty of signing you on as a SpaceCrate Inc. Logistics Courier."`
 			`"The main perks are that you'll be authorized for larger shipments and on top of that you'll get a salary of $20k a day." John continues.`
 			`"As our business continues to expand more jobs and assignments may become available in the future. So welcome aboard, and good luck with your endeavors!!"`
-			`"Clearance for the new jobs will take a days or so to process but I trust you'll find them on the Job Board soon enough!" And with that John walks off, leaving you alone.`
-		log "Congratulations! After the fifth part of the SpaceCrate Recruitment Program concludes you're signed up to be a Logistics Courier for SpaceCrate. The salary allows you to operate larger fleets to ship larger cargo jobs."
+			`"Clearance for the new jobs will take a day or so to process but I trust you'll find them on the Job Board soon enough!" And with that John walks off, leaving you alone.`
+		log "Congratulations! After the fifth part of the SpaceCrate Recruitment Program concludes you're signed up to be a Logistics Courier for SpaceCrate. The salary can help you with operating larger fleets to ship larger cargo jobs."
 	on fail
 		set "spacecrate_career_reset"
 		event "spacecrate_career_application_reset" 180

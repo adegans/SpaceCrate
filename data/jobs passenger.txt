@@ -22,7 +22,7 @@ mission "spacecrate_passenger_pickup_1"
 	passengers 5 20
 	to offer
 		random < 15
-		"combat rating" > 403
+		"reputation: SpaceCrate" > 0
 	source
 		government "SpaceCrate"
 	stopover
@@ -49,7 +49,7 @@ mission "spacecrate_passenger_pickup_2"
 	passengers 2 8
 	to offer
 		random < 60
-		"combat rating" > 20
+		"reputation: SpaceCrate" > 0
 	source
 		government "SpaceCrate"
 	stopover
@@ -76,7 +76,7 @@ mission "spacecrate_passenger_pickup_3"
 	passengers 5 20
 	to offer
 		random < 50
-		"combat rating" > 403
+		"reputation: SpaceCrate" > 0
 	source
 		government "SpaceCrate"
 	stopover
@@ -103,7 +103,7 @@ mission "spacecrate_passenger_pickup_4"
 	passengers 2 10
 	to offer
 		random < 70
-		"combat rating" > 20
+		"reputation: SpaceCrate" > 0
 	source
 		government "SpaceCrate"
 	stopover
@@ -130,7 +130,7 @@ mission "spacecrate_passenger_pickup_5"
 	passengers 8 25
 	to offer
 		random < 50
-		"combat rating" > 403
+		"reputation: SpaceCrate" > 0
 	source
 		government "SpaceCrate"
 	stopover
@@ -150,7 +150,7 @@ mission "spacecrate_passenger_pickup_5"
 		"reputation: SpaceCrate" -= 10
 
 # ------------------------------------------------------------------------------------------
-# Security personel
+# Security personnel
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
 # Fixed fee rewards!!
@@ -163,7 +163,6 @@ mission "spacecrate_passenger_security_1"
 	passengers 28
 	to offer
 		random < 15
-		"combat rating" > 1097
 		"reputation: SpaceCrate" > 1000
 	source
 		government "SpaceCrate"
@@ -198,7 +197,7 @@ mission "spacecrate_passenger_delivery_1"
 	passengers 2 6
 	to offer
 		random < 35
-		"combat rating" > 20
+		"reputation: SpaceCrate" > 0
 	source
 		distance 1 6
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -226,7 +225,7 @@ mission "spacecrate_passenger_delivery_2"
 	passengers 2 6
 	to offer
 		random < 40
-		"combat rating" > 20
+		"reputation: SpaceCrate" > 0
 	source
 		distance 1 6
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -254,7 +253,7 @@ mission "spacecrate_passenger_delivery_3"
 	passengers 2 6
 	to offer
 		random < 25
-		"combat rating" > 20
+		"reputation: SpaceCrate" > 0
 	source
 		distance 5 14
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -282,7 +281,7 @@ mission "spacecrate_passenger_delivery_4"
 	passengers 2 6
 	to offer
 		random < 30
-		"combat rating" > 20
+		"reputation: SpaceCrate" > 0
 	source
 		distance 6 15
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
@@ -301,3 +300,29 @@ mission "spacecrate_passenger_delivery_4"
 	on abort
 		payment -5000
 		dialog "Signing bonus deducted from your account."
+
+# ------------------------------------------------------------------------------------------
+# workers (Immigrants/oppurtunists)
+# Offered in pirate systems shipping people to SpaceCrate
+# ------------------------------------------------------------------------------------------
+# No signing bonus, but higher payment.
+# ------------------------------------------------------------------------------------------
+mission "spacecrate_passenger_delivery_4"
+	job
+	repeat
+	name "Seeking new opportunities"
+	description "A group of <bunks> disdraught pirates is trying to better their lives and find work on <destination>, they can pay you <payment> to take them there."
+	passengers 2 6
+	to offer
+		random < 25
+		"reputation: SpaceCrate" > 0
+	source
+		government "Pirate"
+	destination
+		government "SpaceCrate"
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 50000
+		"reputation: SpaceCrate" += 5
+		dialog "You wish the former pirates good fortunes with SpaceCrate, and collect your payment of <payment>."

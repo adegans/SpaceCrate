@@ -79,6 +79,13 @@ Post your ideas on the repo: https://github.com/adegans/SpaceCrate/discussions
 ---------------------------------------------------------------------------------------------
 - CHANGELOG
 
+0.4.1
+	* Fixed: Trigger for employment storyline is not an actual job
+	* Tweak: Removed combat rating requirement from most jobs
+	* Tweak: Added/streamlined reputation requirement for jobs to help new pilots
+	* Tweak: Larger defense force fleets
+	* Fixed: Various typos in mission briefs and dialog
+
 0.4
 	* Tweak: Increased SpaceCrate salary in order to operate larger fleets
 	* Added: If you reach a high enough reputation with SpaceCrate while employed a new side-story "A Wild Goose Chase" has been added.

@@ -25,7 +25,6 @@ mission "spacecrate_rush_1"
 	cargo random 15 50
 	to offer
 		random < 60
-		"combat rating" > 403
 		"reputation: SpaceCrate" > 200
 	source
 		government "SpaceCrate"
@@ -51,7 +50,6 @@ mission "spacecrate_rush_2"
 	cargo random 10 45
 	to offer
 		random < 40
-		"combat rating" > 403
 		"reputation: SpaceCrate" > 200
 	source
 		government "SpaceCrate"
@@ -77,7 +75,6 @@ mission "spacecrate_rush_3"
 	cargo random 51 80
 	to offer
 		random < 50
-		"combat rating" > 2981
 		"reputation: SpaceCrate" > 200
 	source
 		government "SpaceCrate"
@@ -104,7 +101,6 @@ mission "spacecrate_rush_4"
 	cargo random 70 130
 	to offer
 		random < 60
-		"combat rating" > 2981
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
@@ -131,7 +127,6 @@ mission "spacecrate_rush_5"
 	cargo random 150 475
 	to offer
 		random < 30
-		"combat rating" > 2981
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"

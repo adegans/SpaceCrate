@@ -21,7 +21,6 @@ mission "spacecrate_export_large_1"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 150 640
 	to offer
-		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
@@ -44,7 +43,6 @@ mission "spacecrate_export_large_2"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 200 300
 	to offer
-		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
@@ -67,7 +65,6 @@ mission "spacecrate_export_large_3"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 165 240
 	to offer
-		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
@@ -91,7 +88,6 @@ mission "spacecrate_export_large_4"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 250 375
 	to offer
-		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
@@ -114,7 +110,6 @@ mission "spacecrate_export_large_5"
 	description "Deliver a large shipment of <cargo> to <destination>. Payment is <payment>."
 	cargo random 250 435
 	to offer
-		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"
@@ -138,7 +133,6 @@ mission "spacecrate_export_large_6"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 175 520
 	to offer
-		"combat rating" > 8103
 		"reputation: SpaceCrate" > 500
 	source
 		government "SpaceCrate"

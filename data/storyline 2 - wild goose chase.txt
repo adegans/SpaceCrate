@@ -9,20 +9,19 @@
 # PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 # ------------------------------------------------------------------------------------------
-# Helping Arnan de Gans retrieve a priced possession.
+# Helping Arnan de Gans retrieve a valued possession.
 # Offered on SpaceCrate planets
 # ------------------------------------------------------------------------------------------
 mission "spacecrate_story_goosechase_1"
 	name "SpaceCrate - A wild goose chase"
 	description "CEO Arnan looks like he lost something valuable. Help him find it by whatever means... This is a 4 part side-story."
 	autosave
-	landing
 	source "X-283N1"
 	destination "Reunion"
 	to offer
 		"reputation: SpaceCrate" > 10000
+		"spacecrate_employee" > 0
 		"combat rating" > 59874
-		"spacecrate_employee" == 1
 	on offer
 		conversation
 			`As you land and wait for the ship caterer to finally restock the pantry with doughnuts you notice a man wandering around your ship.`
@@ -50,29 +49,24 @@ mission "spacecrate_story_goosechase_2"
 	name "SpaceCrate - A wild goose chase"
 	description "Chase whoever took the hood ornament to <destination>."
 	autosave
+	landing
 	source "Reunion"
 	destination "Crossroads"
 	to offer
 		has "spacecrate_story_goosechase_1: done"
+		"spacecrate_employee" > 0
 		"reputation: SpaceCrate" > 10000
 		"combat rating" > 59874
 	on offer
 		conversation
 			`As you enter the spaceport looking for someone who might steal a hood ornament someone jumps up and runs away to an Arrow parked outside.`
+			`You shout into the port lounge "Where is that guy going?!", met with blank stares you point at the small ship flying away while reaching for your gun.`
 			`Considering your options for a few seconds you...`
 			choice
 				`	Give chase.`
-				goto yes
-				`	Ask people in the spaceport where the guy went.`
-				goto moreinfo
+				accept
 				`	Decide to do something else first.`
 				defer
-			label yes
-				accept
-			label moreinfo
-			`	You shout into the port lounge "Where is that guy going?!", met with blank stares you point at the small ship flying away while reaching for your gun.`
-			`	"Probably <destination>!" someone suggests.`
-				accept
 	on accept
 		log "The wild goose chase takes you to <destination>."
 	on complete
@@ -89,6 +83,7 @@ mission "spacecrate_story_goosechase_3"
 	name "SpaceCrate - A wild goose chase"
 	description "Capture the thief and retrieve the hood ornament. Requires 1 bunk space."
 	passengers 1
+	landing
 	autosave
 	source "Crossroads"
 	destination "Deadman's Cove"
@@ -110,13 +105,14 @@ mission "spacecrate_story_goosechase_3"
 	to offer
 		has "spacecrate_story_goosechase_1: done"
 		has "spacecrate_story_goosechase_2: done"
-		"reputation: SpaceCrate" > 5000
+		"spacecrate_employee" > 0
+		"reputation: SpaceCrate" > 10000
 	on offer
 		conversation
 			`Inside the ship you find its pilot hiding in a cupboard. Taking no chances you hold the door closed and demand to know where the hood ornament is.`
 			`"It's on the roof" the pilot replies. "Please don't hurt me..."`
 			`Looking on the roof you indeed see some kind of ornament, but it's not a goose.`
-			`"Where is the Goose ornament? You ask the locked in pilot. "Some guy on <destination> took it" The pilot says. You knock out the pilot and lock him in a storage compartment on your ship. Finally you report his ship for smuggling pineapples to Trove.
+			`"Where is the Goose ornament?" You ask the locked in pilot. "Some guy on <destination> took it" The pilot says. You knock out the pilot and lock him in a storage compartment on your ship. Finally you report his ship for smuggling pineapples to Trove.`
 			choice
 				"	Head to <destination>?"
 					accept
@@ -140,6 +136,7 @@ mission "spacecrate_story_goosechase_4"
 	description "Return the hood ornament you retrieved from the pirate pilot you found on <origin>. Requires 2 bunk spaces and 1 ton of cargo space."
 	cargo "Goose Hood Ornament" 1
 	passengers 2
+	landing
 	autosave
 	source "Deadman's Cove"
 	destination "X-283N1"
@@ -170,7 +167,8 @@ mission "spacecrate_story_goosechase_4"
 		has "spacecrate_story_goosechase_1: done"
 		has "spacecrate_story_goosechase_2: done"
 		has "spacecrate_story_goosechase_3: done"
-		"reputation: SpaceCrate" > 5000
+		"spacecrate_employee" > 0
+		"reputation: SpaceCrate" > 10000
 	on offer
 		conversation
 			`Entering the spaceport it's full of dodgy looking people.`

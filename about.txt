@@ -1,5 +1,5 @@
-SpaceCrate adds planet X-283N1 in the Alpha Centauri system. A rapidly developing world obsessed with trade and exports. Ship workers and raw materials in bulk to the planet. Export everything they produce.
-Version: 0.3
+SpaceCrate adds planet X-283N1 in the Alpha Centauri system. A rapidly developing world obsessed with trade and exports. Ship workers and raw materials in bulk to the planet. Export everything they produce and import mostly raw materials to the planet.
+Version: 0.4.1
 Created by: Arnan de Gans
-Website: www.arnan.me
+Website: ajdg.solutions
 Tested on: ES 0.9.16.1 (macOS)

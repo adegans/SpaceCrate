@@ -87,8 +87,10 @@ phrase "spacecrate_hostile_disabled"
 	word
 		" "
 	word
-		"We didn't mean it!"
-		"Don't kill us please."
-		"I hit you by accident!!"
+		"I don't need your help!!"
+		"I can't wait to tell our CEO Arnan about what you did."
+		"It's just a scratch!!"
+		"Wait till I get my engines to start and I'll get you..."
+		"You'll regret attacking me one day!"
 	word
 		"."

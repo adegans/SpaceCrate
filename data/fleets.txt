@@ -112,18 +112,28 @@ fleet "spacecrate_defensefleet"
 		confusion 10
 	variant 10
 		"Argosy (Blaster)" 4
+		"Raven (Afterburner)" 4
+		"Falcon (Heavy)" 2
+		"Hawk (Speedy)" 5
 		"Argosy (Turret)" 4
 		"Modified Argosy" 2
 	variant 20
 		"Modified Argosy (Heavy)" 4
 		"Modified Argosy (Blaster)" 3
+		"Raven (Afterburner)" 4
+		"Falcon (Heavy)" 2
+		"Hawk (Speedy)" 5
 		"Clipper (Speedy)" 4
 	variant 30
 		"Clipper (Speedy)" 3
+		"Raven (Afterburner)" 4
+		"Falcon (Heavy)" 2
 		"Hawk (Speedy)" 5
 		"Argosy (Laser)" 4
 	variant 40
 		"Hawk (Speedy)" 5
+		"Raven (Afterburner)" 4
+		"Falcon (Heavy)" 2
 		"Argosy (Turret)" 2
 		"Modified Argosy (Heavy)" 2
 		"Hawk (Speedy)" 3
@@ -132,22 +142,28 @@ fleet "spacecrate_defensefleet"
 		"Raven (Afterburner)" 4
 		"Falcon (Heavy)" 2
 		"Falcon (Laser)"
+		"Quicksilver" 3
+		"Splinter" 2
 	variant 60
 		"Raven (Afterburner)" 3
-		"Falcon (Laser)"
+		"Falcon (Heavy)" 2
+		"Falcon (Laser)" 2
 		"Quicksilver (Proton)" 3
 		"Quicksilver" 3
 		"Splinter" 2
 	variant 60
 		"Splinter" 2
-		"Quicksilver (Proton)" 3
+		"Quicksilver (Proton)" 6
+		"Falcon (Laser)" 2
 		"Splinter (Laser)" 1
-		"Quicksilver" 4
+		"Quicksilver" 8
 	variant 70
 		"Splinter (Proton)" 2
 		"Quicksilver" 4
 		"Manta (Proton)"
 		"Splinter" 3
+		"Firebird" 2
+		"Firebird (Laser)" 4
 	variant 80
 		"Splinter (Laser)" 2
 		"Splinter (Proton)" 4
@@ -157,10 +173,12 @@ fleet "spacecrate_defensefleet"
 	variant 90
 		"Firebird" 2
 		"Firebird (Plasma)" 3
+		"Berserker (Afterburner)" 3
 		"Corvette (Speedy)" 2
 		"Berserker" 2
 		"Raven (Afterburner)" 4
 	variant 90
+		"Berserker (Afterburner)" 3
 		"Leviathan" 4
 		"Firebird" 6
 		"Leviathan (Laser)" 2
@@ -168,6 +186,8 @@ fleet "spacecrate_defensefleet"
 		"Leviathan (Heavy)" 3
 		"Firebird (Plasma)" 6
 		"Berserker (Afterburner)" 3
+		"Firebird" 2
+		"Firebird (Plasma)" 3
 
 # ------------------------------------------------------------------------------------------
 # Mission fleets

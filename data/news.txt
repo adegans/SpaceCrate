@@ -212,6 +212,6 @@ news "spacecrate_internal_7"
 		"reputation: SpaceCrate" >= 5001
 	message
 		word
-			`"Your reputation with SpaceCrate is excellent. You should apply for a job with us. You'll need something the size of a Container Transport or bigger. Land on X-283N1 to meet the recruiter."`
-			`"You've impressed the stockholders. If you have a Container Transport or bigger you should apply for a job with us. Land on X-283N1 to meet the recruiter."`
-			`"With an excellent track record like this... You should apply for a job with us. Make sure you can carry about 500 tons of cargo. Land on X-283N1 to meet the recruiter."`
+			`"Your reputation with SpaceCrate is excellent. You should apply for a job with us. You'll need something the size of a Container Transport or bigger. Check the spaceport on X-283N1 to see if a recruiter is there."`
+			`"You've impressed the stockholders. If you have a Container Transport or a ship with a bigger cargo hold you should apply for a job with us. You can find our recruiter on X-283N1 at the spaceport."`
+			`"With an excellent track record like your... You should apply for a job with us. Make sure you can carry about 500 tons of cargo. You'll find our recruiter in the spaceport on X-283N1."`
